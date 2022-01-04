@@ -34,7 +34,7 @@ class OffersController < ApplicationController
   def update
     @offer.update(params_offer)
     if @offer.save
-      redirect_to offers_path
+      redirect_to @offer
     else
       render :new
     end

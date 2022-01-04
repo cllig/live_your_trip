@@ -1,6 +1,7 @@
 class Offer < ApplicationRecord
   belongs_to :user
   has_many :reservations
+  has_many_attached :photos
 
   validates :price, presence: true
   validates :theme, presence: true
