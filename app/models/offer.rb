@@ -7,4 +7,5 @@ class Offer < ApplicationRecord
     against: [ :city, :theme ],
     using: {
       tsearch: { prefix: true }
+}
 end

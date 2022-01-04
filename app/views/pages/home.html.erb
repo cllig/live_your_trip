@@ -1,2 +1,33 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+  <div class="searchbar">
+    <%= form_for :search_by_title_and_address, :class => "d-flex", :url => {:controller => 'offers', :action => 'index'}, :html => {:method => 'get'} do |f| %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Ville de départ"
+      %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Dates"
+      %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Thème"
+      %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Budget"
+      %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Nb de personnes"
+      %>
+      <%= submit_tag "Search"%>
+    <% end %>
+  </div>
