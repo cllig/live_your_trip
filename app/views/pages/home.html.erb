@@ -29,28 +29,33 @@
       </div>
   </div>
 
-
+<div class="container">
   <%= form_tag offers_path, method: :get do %>
+  <div class ="my-search-bar">
   <%= text_field_tag :city,
     params[:city],
     class: "form-control",
     placeholder: "Ville"
  %>
+
   <%= date_field_tag :arrival,
     params[:arrival],
     class: "form-control",
     placeholder: "Date d'arrivée"
  %>
+  
   <%= date_field_tag :departure,
     params[:departure],
     class: "form-control",
     placeholder: "Date de retour"
  %>
+ 
   <%= select_tag :theme,
     options_for_select(Offer::THEME),
     class: "form-control",
     placeholder: "Theme"
  %>
+ 
   <%= number_field_tag :price,
     params[:price],
     class: "form-control",
@@ -62,5 +67,7 @@
     placeholder: "Voyageur"
   %>
 
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "kaki-btn-search" %>
+  </div>
 <% end %>
+</div>

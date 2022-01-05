@@ -20,6 +20,24 @@
   text-decoration: none;
 }
 
+.kaki-btn-search {
+  background-color: $darkkaki;
+  color: $white;
+  box-sizing: border-box;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  width: 100px;
+  margin: 10px;
+  outline: none;
+  padding: 6px 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 .kaki-btn:hover,
 .kaki-btn:focus {
