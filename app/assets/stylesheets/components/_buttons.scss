@@ -1,0 +1,53 @@
+
+.kaki-btn {
+  background-color: $darkkaki;
+  color: $white;
+  box-sizing: border-box;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  width: 100px;
+  margin: 10px;
+  outline: none;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.kaki-btn:hover,
+.kaki-btn:focus {
+  background-color: $lightkaki;
+  color: $white;
+  text-decoration: none;
+}
+
+
+.orange-btn {
+  background-color: $orange;
+  color: $white;
+  box-sizing: border-box;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  width: 100px;
+  margin: 10px;
+  outline: none;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.orange-btn:hover,
+.orange-btn:focus {
+  background-color: $lightorange;
+  color: $white;
+  text-decoration: none;
+}

@@ -1,5 +1,34 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  
+</div>
+
+
+
+  <div class="container">
+    <div class="pictogramme" >
+      <h2 class="mb-5"> Tu cherches </h2>
+    </div>
+    <div class="img-home">
+      <div class="text-img">
+        <%= image_tag("fun.png", :alt => "picto") %>
+        <p> Du fun </p>
+      </div>
+      <div class="text-img">
+        <%= image_tag("fun.png", :alt => "picto") %>
+        <p> Des rencontres </p>
+      </div>
+      <div class="text-img">
+        <%= image_tag("fun.png", :alt => "picto") %>
+        <p> Une expérience unique </p>
+      </div>
+    </div>
+      <div class="pictogramme">
+        <p> Prends ton sac 🎒 </p>
+         
+    
+      </div>
+  </div>
+
 
   <%= form_tag offers_path, method: :get do %>
   <%= text_field_tag :city,
