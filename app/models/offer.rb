@@ -1,4 +1,6 @@
 class Offer < ApplicationRecord
+  THEME = ["Gastronomie", "Festif", "Sportif", "Culturel", "Balades", "Artistique", "Detente", "Découverte", "Paranormal", "Urbex"]
+
   belongs_to :user
   has_many :reservations
 
@@ -8,10 +10,4 @@ class Offer < ApplicationRecord
   validates :title, presence: true
   validates :placenumber, presence: true
 
-  include PgSearch::Model
-  pg_search_scope :search_by_city_and_theme,
-    against: [ :city, :theme ],
-    using: {
-      tsearch: { prefix: true }
-}
 end
