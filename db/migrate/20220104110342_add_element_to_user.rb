@@ -3,6 +3,6 @@ class AddElementToUser < ActiveRecord::Migration[6.1]
     add_column :users, :last_name, :string
     add_column :users, :first_name, :string
     add_column :users, :city, :string
-    add_column :users, :guide, :boolean
+    add_column :users, :guide, :boolean, default: false
   end
 end
