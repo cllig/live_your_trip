@@ -1,0 +1,81 @@
+// setup
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// app colors
+
+$background: $sand;
+$headline: $black;
+$paragraph: $darkkaki;
+$button: $lightkaki;
+$button_text: $white;
+$text: $black;
+$stroke: $black;
+$main: $white;
+$highlight: $lightkaki;
+$secondary: $sand;
+$tertiary: $orange;
+
+// Les Balises générales :
+body {
+  background-color: $background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: $text;
+  text-decoration: none;
+}
+p {
+  font-size: clamp(16px, 2vw, 25px);
+  font-family: $body-font;
+  font-weight: normal;
+  color: $paragraph;
+  margin: 0.2em;
+}
+h1 {
+  font-size: 10vmin;
+  font-family: $headers-font;
+  font-weight: normal;
+}
+h2 {
+  font-size: clamp(35px, 5vw, 55px);
+  font-family: $headers-font;
+  font-weight: normal;
+}
+h3 {
+  font-size: clamp(24px, 4vw, 45px);
+  font-family: $headers-font;
+  font-weight: normal;
+}
+h4 {
+  font-size: clamp(22px, 3vw, 35px);
+  font-family: $headers-font;
+  font-weight: normal;
+}
+h5 {
+  font-family: $headers-font;
+  font-weight: 400;
+  font-size: clamp(35px, 5vw, 40px);
+}
+h6 {
+  font-family: $headers-font;
+  font-weight: 400;
+  font-size: clamp(52px, 6vw, 100px);
+}
+
+// Boutons & inputs
+$border-radius:    2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
