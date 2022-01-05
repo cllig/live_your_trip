@@ -13,7 +13,7 @@ $background: $sand;
 $headline: $black;
 $paragraph: $darkkaki;
 $button: $lightkaki;
-$button_text: $white;
+$button_text: $black;
 $text: $black;
 $stroke: $black;
 $main: $white;
@@ -24,6 +24,7 @@ $tertiary: $orange;
 // Les Balises générales :
 body {
   background-color: $background;
+  color: $text !important;
 }
 
 h1,
@@ -34,14 +35,14 @@ h5,
 h6,
 p,
 a {
-  color: $text;
+  color: $text !important;
   text-decoration: none;
 }
 p {
   font-size: clamp(16px, 2vw, 25px);
   font-family: $body-font;
   font-weight: normal;
-  color: $paragraph;
+  color: $paragraph !important;
   margin: 0.2em;
 }
 h1 {
