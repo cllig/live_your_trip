@@ -30,34 +30,37 @@
   </div>
 
 
-  <div class="searchbar">
-    <%= form_for :search_by_title_and_address, :class => "d-flex", :url => {:controller => 'offers', :action => 'index'}, :html => {:method => 'get'} do |f| %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Ville de départ"
-      %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Dates"
-      %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Thème"
-      %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Budget"
-      %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Nb de personnes"
-      %>
-      <%= submit_tag "Search"%>
-    <% end %>
-  </div>
+  <%= form_tag offers_path, method: :get do %>
+  <%= text_field_tag :city,
+    params[:city],
+    class: "form-control",
+    placeholder: "Ville"
+ %>
+  <%= date_field_tag :arrival,
+    params[:arrival],
+    class: "form-control",
+    placeholder: "Date d'arrivée"
+ %>
+  <%= date_field_tag :departure,
+    params[:departure],
+    class: "form-control",
+    placeholder: "Date de retour"
+ %>
+  <%= select_tag :theme,
+    options_for_select(Offer::THEME),
+    class: "form-control",
+    placeholder: "Theme"
+ %>
+  <%= number_field_tag :price,
+    params[:price],
+    class: "form-control",
+    placeholder: "Budget"
+ %>
+  <%= number_field_tag :placenumber,
+    params[:placenumber],
+    class: "form-control",
+    placeholder: "Voyageur"
+  %>
 
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>

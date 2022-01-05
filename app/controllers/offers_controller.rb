@@ -4,13 +4,26 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].present?
-      @offers = Offer.search_by_city_and_theme(params[:query])
+    if params[:theme].present?
+      @offers = Offer.where(theme: params[:theme])
     else
       @offers = Offer.all
     end
+
+    if params[:city].present?
+      @offers = @offers.where(city: params[:city])
+    end
+
+    if params[:price].present?
+      @offers = @offers.where("price < ?", params[:price])
+    end
+
+    if params[:placenumber].present?
+      @offers = @offers.where("placenumber > ?", params[:placenumber])
+    end
+
   end
-  
+
   def show
   end
 
