@@ -1,3 +1,5 @@
 <h1><%= @offer.title %></h1>
 
+<%= link_to "Réserver", new_offer_reservation_path(@offer) %>
+
 <%= link_to "edit", edit_offer_path %>
