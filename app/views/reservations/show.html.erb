@@ -6,6 +6,9 @@
 <p>Ville : <%= @reservation.offer.city %></p>
 <p>Date d'arrivée : <%= @reservation.arrival%></p>
 <p>Date de départ : <%= @reservation.departure%></p>
+<p>Nombre de participants : <%= @reservation.participant %></p>
+<p>Prix par personne : <%= @reservation.offer.price %></p>
+<p>Prix total : <%= @reservation.offer.price * @reservation.participant %></p>
 
 <%= link_to "Modifier", edit_reservation_path(@reservation) %>
 <%= link_to 'Supprimer', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>

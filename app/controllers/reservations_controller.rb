@@ -1,5 +1,15 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:show, :edit, :update]
+  before_action :set_reservation, only: [:show, :edit, :update, :delete]
+
+  def index
+    @user = current_user
+    @reservation_requests = @user.reservations
+    @reservation_demands = []
+    @reservations = Reservation.all
+    @reservations.each do |reservation|
+      @reservation_demands << reservation if reservation.offer.user == @user
+    end
+  end
 
   def show
   end
@@ -36,7 +46,7 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to root_url, notice: 'Reservation was successfully destroyed.'
+    redirect_to reservations_path, notice: 'Reservation was successfully destroyed.'
   end
 
   private
