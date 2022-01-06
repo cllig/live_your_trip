@@ -1,7 +1,7 @@
 <h1> All our Offers </h1>
 <% @offers.each do | offer | %>
-    <h3><%=link_to offer.title, offer_path(offer) %></h3>
-    <h3><%= offer.city %></h3> <p><%= offer.user.first_name %></p>
+    <h3><%=offer.title%> <%= "avec" %> <%=offer.user.first_name%> <%= "à" %> <%= offer.city %></h3>
    <p><%= offer.theme %></p>
+   <%=link_to "See More", offer_path(offer) %>
 <% end %>
 <%= link_to "Back", root_path %>
