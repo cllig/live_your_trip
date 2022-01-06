@@ -1,12 +1,14 @@
 <h1><%= @offer.title %></h1>
 
+<div>
+<h2> <%= @offer.description %> </h2>
+<p>Durée de la visite<%= @offer.hours %></p>
+</div>
+
+<p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
 <%= link_to "Réserver", new_offer_reservation_path(@offer) %>
 
 <%= link_to "edit", edit_offer_path %>
-
-<div>
-<h2> <%= @offer.description %> </h2>
-</div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -34,3 +36,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+
+<%= link_to "Précédent", offers_path(@offers) %>

@@ -3,9 +3,9 @@
 
 <div class='align-card'>
 <% @offers.each do | offer | %>
+
     <%= render 'offers/cards', offer: offer %>
 <% end %>
 </div>
-
-
-
+   <%=link_to "See More", offer_path(offer) %>
+<%= link_to "Back", root_path %>
