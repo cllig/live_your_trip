@@ -1,39 +1,146 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+@mixin radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
 }
-
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+@mixin cardsOpen() {
+    &::before {
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .book-container {
+      .content {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .informations-container {
+      transform: translateY(0px);
+      .more-information {
+        opacity: 1;
+      }
+    }
 }
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
+*{
   margin: 0;
+  padding: 0;
+  font-family: $body-font;
+}
+h2{
+  color: $white;
+  font-weight: 500;
+}
+.container-booking-cards {
+    // display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    // padding:0;
+  .booking-card{
+    height: 400px;
+    position: relative;
+    // width: 300px;
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include radius(10px);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: $blue;
+    transition: .3s;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10,72,112, 0);
+      transition: .3s;
+    }
+    .book-container {
+      height: 200px;
+  
+      .content {
+        position: relative;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        transform: translateY(-200px);
+        transition: .3s;
+        
+        
+      }
+    }
+    .informations-container{
+      flex: 1 0 auto;
+      padding: 20px;
+      background: $orange;
+      transform: translateY(206px);
+      transition: .3s;
+      .title {
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 1.2em;
+        &::after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          width: 50px;
+          margin: auto;
+          background: $white;
+        }
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        .icon {
+          margin-right: 10px;
+        }
+      }
+    
+      
+    }
+    &:hover {
+      @include cardsOpen();
+    }
+  }
+}
+@media (max-width: 768px) {
+  ul {
+    .booking-card{
+      @include cardsOpen();
+    }
+  }
 }
 
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
+h1{
+  margin: 10px 20px;
 }
 
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.align-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+  align-items: center;
+  margin: 60px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.title-card {
+  text-align: center;
 }

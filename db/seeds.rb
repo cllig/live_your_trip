@@ -115,3 +115,4 @@ Offer.create(price: 8, theme: "Balade", theme_description: "Venez vous promener 
 Offer.create(price: 12, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Paris", user: user10, title: "Visite du Tracadero", placenumber: 8)
 Offer.create(price: 15, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user11, title: "Viens visiter la ville Rose !", placenumber: 11)
 Offer.create(price: 6, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user12, title: "Découvre les incontournables de Toulouse !", placenumber: 10)
+
