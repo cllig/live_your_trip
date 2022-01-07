@@ -135,7 +135,7 @@ offer2 = Offer.create(price: 20, theme: "Culturel", theme_description: "Decouvre
 offer2.photos.attach(io: file4, filename: 'mucem3.png', content_type: 'image/png')
 offer2.photos.attach(io: file5, filename: 'mucem4.png', content_type: 'image/png')
 offer2.photos.attach(io: file6, filename: 'mucem4.png', content_type: 'image/png')
-offer3 = Offer.create(price: 40, theme: "Culturel", theme_description: "sfjlks ", city: "Marseille", user: user3, title: "skldgklds", placenumber: 12)
+offer3 = Offer.create(price: 40, theme: "Culturel", theme_description: "Les lieux emblématiques de Marseille", city: "Marseille", user: user3, title: "Les emblèmes Marseillais", placenumber: 12)
 offer3.photos.attach(io: file7, filename: 'ndlg.png', content_type: 'image/png')
 offer3.photos.attach(io: file8, filename: 'ndlg1.png', content_type: 'image/png')
 offer3.photos.attach(io: file9, filename: 'ndlg2.png', content_type: 'image/png')
