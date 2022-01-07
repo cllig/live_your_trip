@@ -1,13 +1,11 @@
-<ul>
+
+<div class='container-booking-cards'>
   <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1580137197581-df2bb346a786?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);">
     <div class="book-container">
     </div>
     <div class="informations-container">
-      <h2 class="title"></h2>
-      <p class="sub-title"></p>
-      <p class="price">
-      <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" /></svg>
-De 0 à 35 €</p>
+      <h2 class="title"><%=link_to offer.title, offers_path(@offer) %></h2>
+      <p class="sub-title"><%= offer.theme %></p>
+      <p class='price'><%= offer.price %>€</p>
   </li>
-</ul>
+</div>

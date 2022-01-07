@@ -30,34 +30,29 @@
 }
 
 h2{
-  color: $lightkaki;
+  color: $white;
   font-weight: 500;
 }
-
-ul{
-    display: flex;
+.container-booking-cards {
+    // display: flex;
     flex-wrap: wrap;
-
     list-style: none;
-    padding:0;
-
+    // padding:0;
   .booking-card{
+    height: 400px;
     position: relative;
-    width: 300px;
+    // width: 300px;
     display: flex;
     flex: 0 0 300px;
     flex-direction: column;
-
-    margin: 20px;
+    margin: 0 auto;
     margin-bottom: 30px;
     @include radius(10px);
-
     overflow: hidden;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     text-align: center;
     color: $blue;
-
     transition: .3s;
 
     &::before{
@@ -73,6 +68,7 @@ ul{
 
     .book-container {
       height: 200px;
+      
       .content {
         position: relative;
         opacity: 0;
@@ -83,111 +79,28 @@ ul{
         width: 100%;
         transform: translateY(-200px);
         transition: .3s;
-
-        .btn {
-          border: 3px solid white;
-          padding: 10px 15px;
-          background: none;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 1.3em;
-          color: white;
-          cursor: pointer;
-          transition: .3s;
-
-          &:hover {
-            background: white;
-            border: 0px solid white;
-            color: $blue;
-          }
-        }
-      }
-    }
-
-    .informations-container{
-      flex: 1 0 auto;
-      padding: 20px;
-      background: $lightkaki;
-      transform: translateY(206px);
-      transition: .3s;
-
-      .title {
-        position: relative;
-
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-
-        font-weight: bold;
-        font-size: 1.2em;
-
-        &::after{
-          content: '';
-
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
-
           height: 3px;
           width: 50px;
-
           margin: auto;
-
-          background: $blue;
+          background: $white;
         }
       }
-
+    
       .price {
         display: flex;
         align-items: center;
         justify-content: center;
-
         margin-top: 10px;
-
+        
         .icon {
           margin-right: 10px;
         }
       }
-
-      .more-information {
-        opacity: 0;
-
-        transition: .3s;
-        .info-and-date-container {
-          display: flex;
-
-          .box {
-            flex: 1 0;
-
-            padding: 15px;
-            margin-top: 20px;
-            @include radius(10px);
-
-            background: white;
-
-            font-weight: bold;
-            font-size: 0.9em;
-
-            .icon {
-              margin-bottom: 5px;
-            }
-
-            &.info{
-              color: $orange;
-
-              margin-right: 10px;
-            }
-          }
-        }
-        .disclaimer {
-          margin-top: 20px;
-
-          font-size: 0.8em;
-          color: $lightkaki;
-        }
-      }
-    }
-
+    
     &:hover {
       @include cardsOpen();
     }
@@ -202,24 +115,23 @@ ul{
   }
 }
 
-.credits{
-  display: table;
-  background: $blue;
-  color: white;
-  line-height: 25px;
-
-  margin: 10px auto;
-  padding: 20px;
-
-  @include radius(10px);
-
-  text-align: center;
-
-  a{
-    color: $blue;
-  }
-}
 
 h1{
   margin: 10px 20px;
 }
+
+.align-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+  align-items: center;
+  margin: 60px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+}
+
+.title-card {
+  text-align: center;
+}
+

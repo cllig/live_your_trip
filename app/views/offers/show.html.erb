@@ -1,7 +1,9 @@
 <div class="container">
 <div class ="offers">
 <h1><%= @offer.title %></h1>
+
 <p><%= @offer.city %></p></div>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -28,14 +30,17 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <div class="user">
 blablabla
 </div>
 <div class= "details">
 <div class="description">
+ <p>Durée de la visite<%= @offer.hours %></p>
 <h2> <%= @offer.description %> </h2>
 </div>
 <div class ="reservations">
+<p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
 <p> date </p>
 <%= link_to "Réserver", new_offer_reservation_path(@offer), class: "orange-btn" %>
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
@@ -43,3 +48,5 @@ blablabla
 </div>
 </div>
 </div>
+
+<%= link_to "Précédent", offers_path(@offers) %>
