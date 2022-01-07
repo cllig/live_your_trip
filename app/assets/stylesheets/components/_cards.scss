@@ -38,7 +38,6 @@ h2{
 .container-booking-card{
     display: flex;
     flex-wrap: wrap;
-
     list-style: none;
     padding:0;
 
@@ -65,7 +64,7 @@ h2{
     color: blue;
 
     transition: .3s;
-    
+
     &::before{
       content: '';
       position: absolute;
@@ -80,7 +79,7 @@ h2{
 
       transition: .3s;
     }
-    
+
     .book-container {
       height: 200px;
       .content {
@@ -92,17 +91,17 @@ h2{
         height: 100%;
         width: 100%;
 
-        
+
         transform: translateY(-200px);
-        
+
         transition: .3s;
-        
-        .btn {      
+
+        .btn {
           border: 3px solid white;
           padding: 10px 15px;
-          
+
           background: none;
-          
+
 
           text-transform: uppercase;
           font-weight: bold;
@@ -128,42 +127,42 @@ h2{
 
 
 
-    
-    .informations-container{      
+
+    .informations-container{
       flex: 1 0 auto;
-      
+
       padding: 20px;
-      
+
       background: $lightorange;
-      
+
       transform: translateY(206px);
-      
+
       transition: .3s;
-      
+
       .title {
         position: relative;
-        
+
         padding-bottom: 10px;
         margin-bottom: 10px;
-        
+
         font-weight: bold;
         font-size: 1.2em;
-        
+
         &::after{
           content: '';
-          
+
 
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
 
-          
+
           height: 3px;
           width: 50px;
-          
+
           margin: auto;
-          
+
           background: $black;
         }
       }
@@ -180,10 +179,10 @@ h2{
         }
       }
 
-      
+
       .more-information {
         opacity: 0;
-        
+
         transition: .3s;
         .info-and-date-container {
           display: flex;
@@ -221,7 +220,7 @@ h2{
         }
       }
     }
-    
+
 
     &:hover {
       @include cardsOpen();
@@ -235,27 +234,20 @@ h2{
     }
   }
 }
-.credits{
-  display: table;
-  background: $blue;
-  color: white;
-  line-height: 25px;
 
-
-
-.credits{
+.credits {
   display: table;
   background: $lightorange;
   color: white;
   line-height: 25px;
-  
+
   margin: 10px auto;
   padding: 20px;
-  
+
   @include radius(10px);
-  
+
   text-align: center;
-  
+
   a{
     color: blue;
   }
@@ -265,14 +257,11 @@ h2{
 .align-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
+  grid-gap: 50px;
   align-items: center;
   margin: 60px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
 }
+
 .title-card {
   text-align: center;
 }
-
