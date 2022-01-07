@@ -143,5 +143,3 @@ offer4 = Offer.create(price: 20, theme: "Culturel", theme_description: "Vivez un
 offer4.photos.attach(io: file10, filename: 'velodrome.png', content_type: 'image/png')
 offer4.photos.attach(io: file11, filename: 'velodrome2.png', content_type: 'image/png')
 offer4.photos.attach(io: file12, filename: 'velodrome3.png', content_type: 'image/png')
-
-
