@@ -125,7 +125,7 @@ h2{
       
       padding: 20px;
       
-      background: grey;
+      background: $lightorange;
       
       transform: translateY(206px);
       
@@ -153,7 +153,7 @@ h2{
           
           margin: auto;
           
-          background: $blue;
+          background: $black;
         }
       }
       
@@ -203,7 +203,7 @@ h2{
           margin-top: 20px;
 
           font-size: 0.8em;
-          color: grey;
+          color: $lightorange;
         }
       }
     }
@@ -224,7 +224,7 @@ h2{
 
 .credits{
   display: table;
-  background: $blue;
+  background: $lightorange;
   color: white;
   line-height: 25px;
   
@@ -254,4 +254,8 @@ h2{
 .title-card {
   text-align: center;
 }
+
+
+
+
 
