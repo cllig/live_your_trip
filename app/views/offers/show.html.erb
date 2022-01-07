@@ -42,11 +42,11 @@ blablabla
 <div class ="reservations">
 <p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
 <p> date </p>
-<%= link_to "Réserver", new_offer_reservation_path(@offer), class: "orange-btn" %>
+<%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
 </div>
 </div>
 </div>
 </div>
 
-<%= link_to "Précédent", offers_path(@offers) %>
+<%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city) %>
