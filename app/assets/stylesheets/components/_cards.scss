@@ -37,10 +37,13 @@ h2{
 
 .container-booking-card{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     list-style: none;
     padding:0;
+    height: 500px;
+    width: 400px;
 
 
   .booking-card{
@@ -263,14 +266,16 @@ h2{
 
 
 .align-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 80px;
   align-items: center;
   margin: 60px;
-//   display: flex;
+  display: flex;
 //   justify-content: space-between;
 //   align-items: center;
+height: 500px;
+width: 400px;
 }
 .title-card {
   text-align: center;
