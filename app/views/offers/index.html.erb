@@ -1,3 +1,4 @@
+
 <div class='title-card'><h1>Toutes nos offres</h1>
 </div>
 
@@ -7,3 +8,6 @@
     <%= render 'offers/cards', offer: offer %>
 <% end %>
 </div>
+<%= link_to "See More", offer_path(offer) %>
+<%= link_to "Back", root_path %>
+

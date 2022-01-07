@@ -1,33 +1,9 @@
 <div class="banner">
-  
 </div>
 
-
-
-  <div class="container">
-    <div class="pictogramme" >
-      <h2 class="mb-5"> Tu cherches </h2>
-    </div>
-    <div class="img-home">
-      <div class="text-img">
-        <%= image_tag("fun.png", :alt => "picto") %>
-        <p> Du fun </p>
-      </div>
-      <div class="text-img">
-        <%= image_tag("fun.png", :alt => "picto") %>
-        <p> Des rencontres </p>
-      </div>
-      <div class="text-img">
-        <%= image_tag("fun.png", :alt => "picto") %>
-        <p> Une expérience unique </p>
-      </div>
-    </div>
-      <div class="pictogramme">
+<div class="pictogramme">
         <p> Prends ton sac 🎒 </p>
-         
-    
       </div>
-  </div>
 
 <div class="container">
   <%= form_tag offers_path, method: :get do %>
@@ -43,19 +19,19 @@
     class: "form-control",
     placeholder: "Date d'arrivée"
  %>
-  
+
   <%= date_field_tag :departure,
     params[:departure],
     class: "form-control",
     placeholder: "Date de retour"
  %>
- 
+
   <%= select_tag :theme,
     options_for_select(Offer::THEME),
     class: "form-control",
     placeholder: "Theme"
  %>
- 
+
   <%= number_field_tag :price,
     params[:price],
     class: "form-control",
@@ -70,4 +46,25 @@
   <%= submit_tag "Search", class: "kaki-btn-search" %>
   </div>
 <% end %>
+</div>
+
+  <div class="container">
+    <div class="pictogramme" >
+      <h2 class="mb-5"> Tu cherches </h2>
+    </div>
+    <div class="img-home">
+      <div class="text-img">
+        <%= image_tag("fun.svg", :alt => "picto") %>
+        <p> Du fun </p>
+      </div>
+      <div class="text-img">
+        <%= image_tag("people.svg", :alt => "picto") %>
+        <p> Des rencontres </p>
+      </div>
+      <div class="text-img">
+        <%= image_tag("valises.svg", :alt => "picto") %>
+        <p> Une expérience unique </p>
+      </div>
+    </div>
+   </div>
 </div>
