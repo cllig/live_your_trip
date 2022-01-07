@@ -6,20 +6,16 @@
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  <% @offer.photos.each_with_index do |photo, index| %>
+    <li data-target="#carouselExampleIndicators" data-slide-to="<%= "#{index}" %>" class="active"></li>
+  <% end %>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide1" %>
+    <% @offer.photos.each_with_index do |photo, index| %>
+    <div class="carousel-item carousel-img <%= index == 0 ? "active" : ""%> ">
+        <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide#{index} " %>
     </div>
-    <div class="carousel-item">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide2" %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide3" %>
-    </div>
+    <% end %>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,21 +28,23 @@
 </div>
 
 <div class="user">
-blablabla
+<%= @offer.user.first_name %>
 </div>
 <div class= "details">
 <div class="description">
- <p>Durée de la visite<%= @offer.hours %></p>
 <h2> <%= @offer.description %> </h2>
 </div>
 <div class ="reservations">
-<p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
-<p> date </p>
+
 <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
+ver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
+
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
+<%= link_to "Précédent", offers_path(@offers), class: "orange-btn" %>
 </div>
 </div>
 </div>
 </div>
 
 <%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city) %>
+

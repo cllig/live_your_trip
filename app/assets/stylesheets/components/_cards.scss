@@ -4,7 +4,6 @@
   -moz-border-radius: $val;
   border-radius: $val;
 }
-
 @mixin cardsOpen() {
     &::before {
       background: rgba(10,72,112, 0.6);
@@ -17,20 +16,20 @@
       }
     }
 
-    .informations-container {      
+    .informations-container {
+
       transform: translateY(0px);
       .more-information {
         opacity: 1;
       }
     }
 }
-
 *{
   margin: 0;
   padding: 0;
-  
-}
 
+
+}
 h2{
   color: #0a4870;
   font-weight: 500;
@@ -43,7 +42,7 @@ h2{
     list-style: none;
     padding:0;
 
-  
+
   .booking-card{
     position: relative;
     width: 300px;
@@ -51,19 +50,20 @@ h2{
     display: flex;
     flex: 0 0 300px;
     flex-direction: column;
-    
+
+
     margin: 20px;
     margin-bottom: 30px;
     @include radius(10px);
-    
+
     overflow: hidden;
-    
+
     background-position: center center;
     background-size: cover;
-    
+
     text-align: center;
     color: blue;
-    
+
     transition: .3s;
     
     &::before{
@@ -73,9 +73,11 @@ h2{
       left: 0;
       right: 0;
       bottom: 0;
-      
+
+
       background: rgba(10,72,112, 0);
-      
+
+
       transition: .3s;
     }
     
@@ -89,6 +91,7 @@ h2{
         justify-content: center;
         height: 100%;
         width: 100%;
+
         
         transform: translateY(-200px);
         
@@ -100,25 +103,31 @@ h2{
           
           background: none;
           
+
           text-transform: uppercase;
           font-weight: bold;
           font-size: 1.3em;
           color: white;
-          
+
+
           cursor: pointer;
-          
+
           transition: .3s;
-          
+
           &:hover {
             background: white;
-            
+
             border: 0px solid white;
-            
+
+
             color: $blue;
           }
         }
       }
     }
+
+
+
     
     .informations-container{      
       flex: 1 0 auto;
@@ -143,10 +152,12 @@ h2{
         &::after{
           content: '';
           
+
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
+
           
           height: 3px;
           width: 50px;
@@ -156,18 +167,19 @@ h2{
           background: $black;
         }
       }
-      
+
       .price {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         margin-top: 10px;
-        
+
         .icon {
           margin-right: 10px;
         }
       }
+
       
       .more-information {
         opacity: 0;
@@ -202,18 +214,20 @@ h2{
         .disclaimer {
           margin-top: 20px;
 
+
+
           font-size: 0.8em;
           color: $lightorange;
         }
       }
     }
     
+
     &:hover {
       @include cardsOpen();
     }
   }
 }
-
 @media (max-width: 768px) {
   ul {
     .booking-card{
@@ -221,6 +235,13 @@ h2{
     }
   }
 }
+.credits{
+  display: table;
+  background: $blue;
+  color: white;
+  line-height: 25px;
+
+
 
 .credits{
   display: table;
@@ -240,6 +261,7 @@ h2{
   }
 }
 
+
 .align-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -250,12 +272,7 @@ h2{
 //   justify-content: space-between;
 //   align-items: center;
 }
-
 .title-card {
   text-align: center;
 }
-
-
-
-
 
