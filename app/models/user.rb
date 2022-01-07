@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :reservations
   has_many :offers
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_one_attached :avatar
 
   validates :first_name, presence: true
