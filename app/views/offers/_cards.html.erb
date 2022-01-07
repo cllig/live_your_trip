@@ -3,7 +3,8 @@
     <div class="book-container">
     </div>
     <div class="informations-container">
-      <h2 class="title"><%= offer.title %></h2>
+
+      <h2 class="title"><%=link_to offer.title, offers_path(@offer) %></h2>
       <p class="sub-title"><%= offer.theme %></p>
       <p class='price'><%= offer.price %>€</p>
       
