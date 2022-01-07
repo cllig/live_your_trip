@@ -4,22 +4,26 @@
 
 <p><%= @offer.city %></p></div>
 
+  <% @offer.photos.each do |photo| %>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
+   <% end %>
   <div class="carousel-inner">
+    <% @offer.photos.each do |photo| %>
     <div class="carousel-item active">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide1" %>
+        <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide1" %>
     </div>
     <div class="carousel-item">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide2" %>
+       <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide2" %>
     </div>
     <div class="carousel-item">
-      <%= image_tag "slide.jpg", class: "d-block w-100", id: "slide3" %>
+      <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide3" %>
     </div>
+    <% end %>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,21 +36,18 @@
 </div>
 
 <div class="user">
-blablabla
 </div>
 <div class= "details">
 <div class="description">
- <p>Durée de la visite<%= @offer.hours %></p>
 <h2> <%= @offer.description %> </h2>
 </div>
 <div class ="reservations">
 <p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
-<p> date </p>
+<p><%= @offer.hours %> </p>
 <%= link_to "Réserver", new_offer_reservation_path(@offer), class: "orange-btn" %>
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
+<%= link_to "Précédent", offers_path(@offers), class: "orange-btn" %>
 </div>
 </div>
 </div>
 </div>
-
-<%= link_to "Précédent", offers_path(@offers) %>
