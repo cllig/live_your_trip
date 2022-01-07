@@ -1,0 +1,11 @@
+<h1>Bonjour <%= current_user.first_name %> ! </h1>
+
+<h3>Vos informations : </h3>
+<p> Nom : <%= current_user.last_name %> Prénom : <%= current_user.first_name %></p>
+<p> Email : <%= current_user.email %></p>
+<p> Êtes-vous guide ? <%if current_user.guide == true %>
+<%= "Oui" %>
+<% else%>
+<%= "Non" %>
+<% end %>
+</p>
