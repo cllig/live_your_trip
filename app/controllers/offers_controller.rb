@@ -6,25 +6,33 @@ class OffersController < ApplicationController
   def index
     if params[:theme].present?
       @offers = Offer.where(theme: params[:theme])
+      @theme = params[:theme]
     else
       @offers = Offer.all
     end
 
     if params[:city].present?
       @offers = @offers.where(city: params[:city])
+      @city = params[:city]
     end
 
     if params[:price].present?
       @offers = @offers.where("price < ?", params[:price])
+      @price = params[:price]
     end
 
     if params[:placenumber].present?
       @offers = @offers.where("placenumber > ?", params[:placenumber])
+      @placenumber = params[:placenumber]
     end
 
   end
 
   def show
+    @theme = params[:theme]
+    @city = params[:city]
+    @price = params[:price]
+    @placenumber = params[:placenumber]
   end
 
   def new

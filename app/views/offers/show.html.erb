@@ -35,13 +35,16 @@
 <h2> <%= @offer.description %> </h2>
 </div>
 <div class ="reservations">
-<p>Rating : <%= @offer.user.rating_number %></p>
-<p>Niveau : <%= @offer.user.rating_content %></p>
-<p><%= @offer.hours %> </p>
-<%= link_to "Réserver", new_offer_reservation_path(@offer), class: "orange-btn" %>
+
+<%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
+ver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
+
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
 <%= link_to "Précédent", offers_path(@offers), class: "orange-btn" %>
 </div>
 </div>
 </div>
 </div>
+
+<%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city) %>
+
