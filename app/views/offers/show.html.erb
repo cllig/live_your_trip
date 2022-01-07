@@ -4,24 +4,16 @@
 
 <p><%= @offer.city %></p></div>
 
-  <% @offer.photos.each do |photo| %>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  <% @offer.photos.each_with_index do |photo, index| %>
+    <li data-target="#carouselExampleIndicators" data-slide-to="<%= "#{index}" %>" class="active"></li>
+  <% end %>
   </ol>
-   <% end %>
   <div class="carousel-inner">
-    <% @offer.photos.each do |photo| %>
-    <div class="carousel-item active">
-        <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide1" %>
-    </div>
-    <div class="carousel-item">
-       <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide2" %>
-    </div>
-    <div class="carousel-item">
-      <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide3" %>
+    <% @offer.photos.each_with_index do |photo, index| %>
+    <div class="carousel-item carousel-img <%= index == 0 ? "active" : ""%> ">
+        <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide#{index} " %>
     </div>
     <% end %>
   </div>
@@ -36,13 +28,15 @@
 </div>
 
 <div class="user">
+<%= @offer.user.first_name %>
 </div>
 <div class= "details">
 <div class="description">
 <h2> <%= @offer.description %> </h2>
 </div>
 <div class ="reservations">
-<p><%= @offer.user.rating_number %> <%= @offer.user.rating_content %></p>
+<p>Rating : <%= @offer.user.rating_number %></p>
+<p>Niveau : <%= @offer.user.rating_content %></p>
 <p><%= @offer.hours %> </p>
 <%= link_to "Réserver", new_offer_reservation_path(@offer), class: "orange-btn" %>
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
