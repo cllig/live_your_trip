@@ -4,7 +4,7 @@ class Offer < ApplicationRecord
   belongs_to :user
   has_many :reservations, dependent: :destroy
   has_many_attached :photos
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   validates :price, presence: true
   validates :theme, presence: true
   validates :city, presence: true
