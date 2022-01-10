@@ -1,4 +1,3 @@
-
 @mixin radius($val) {
   -webkit-border-radius: $val;
   -moz-border-radius: $val;
@@ -6,18 +5,16 @@
 }
 @mixin cardsOpen() {
     &::before {
-      background: rgba(10,72,112, 0.6);
+      background: rgba(112, 25, 10, 0.6);
     }
     .book-container {
       .content {
         opacity: 1;
-
         transform: translateY(0px);
       }
     }
 
     .informations-container {
-
       transform: translateY(0px);
       .more-information {
         opacity: 1;
@@ -27,42 +24,42 @@
 *{
   margin: 0;
   padding: 0;
-
+  font-family: $body-font;
 
 }
-h2{
-  color: #0a4870;
-  font-weight: 500;
+
+.align-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+
+.title-card {
+  text-align: center;
 }
 
 .container-booking-card{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding:0;
 
 
   .booking-card{
     position: relative;
-    width: 300px;
-    height: 400px;
     display: flex;
-    flex: 0 0 300px;
+    flex: auto;
     flex-direction: column;
 
-
-    margin: 20px;
+    margin: 30px;
     margin-bottom: 30px;
+
+
     @include radius(10px);
-
     overflow: hidden;
-
     background-position: center center;
     background-size: cover;
-
     text-align: center;
-    color: blue;
-
     transition: .3s;
 
     &::before{
@@ -72,16 +69,12 @@ h2{
       left: 0;
       right: 0;
       bottom: 0;
-
-
       background: rgba(10,72,112, 0);
-
-
       transition: .3s;
     }
 
     .book-container {
-      height: 200px;
+      height: 90px;
       .content {
         position: relative;
         opacity: 0;
@@ -90,46 +83,12 @@ h2{
         justify-content: center;
         height: 100%;
         width: 100%;
-
-
-        transform: translateY(-200px);
-
         transition: .3s;
-
-        .btn {
-          border: 3px solid white;
-          padding: 10px 15px;
-
-          background: none;
-
-
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 1.3em;
-          color: white;
-
-
-          cursor: pointer;
-
-          transition: .3s;
-
-          &:hover {
-            background: white;
-
-            border: 0px solid white;
-
-
-            color: $blue;
-          }
-        }
       }
     }
 
 
-
-
     .informations-container{
-      flex: 1 0 auto;
 
       padding: 20px;
 
@@ -141,7 +100,6 @@ h2{
 
       .title {
         position: relative;
-
         padding-bottom: 10px;
         margin-bottom: 10px;
 
@@ -157,10 +115,6 @@ h2{
           left: 0;
           right: 0;
 
-
-          height: 3px;
-          width: 50px;
-
           margin: auto;
 
           background: $black;
@@ -174,50 +128,12 @@ h2{
 
         margin-top: 10px;
 
-        .icon {
-          margin-right: 10px;
-        }
-      }
-
 
       .more-information {
         opacity: 0;
-
         transition: .3s;
-        .info-and-date-container {
-          display: flex;
 
-          .box {
-            flex: 1 0;
-
-            padding: 15px;
-            margin-top: 20px;
-            @include radius(10px);
-
-            background: white;
-
-            font-weight: bold;
-            font-size: 0.9em;
-
-            .icon {
-              margin-bottom: 5px;
-            }
-
-            &.info{
-              color: $orange;
-
-              margin-right: 10px;
-            }
-          }
-        }
-        .disclaimer {
-          margin-top: 20px;
-
-
-
-          font-size: 0.8em;
-          color: $lightorange;
-        }
+      }
       }
     }
 
@@ -233,35 +149,7 @@ h2{
       @include cardsOpen();
     }
   }
-}
-
-.credits {
-  display: table;
-  background: $lightorange;
-  color: white;
-  line-height: 25px;
-
-  margin: 10px auto;
-  padding: 20px;
-
-  @include radius(10px);
-
-  text-align: center;
-
-  a{
-    color: blue;
-  }
-}
-
-
-.align-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
-  align-items: center;
-  margin: 60px;
-}
-
-.title-card {
-  text-align: center;
+  .align-card {
+    grid-template-columns: 1fr 1fr;
+    }
 }
