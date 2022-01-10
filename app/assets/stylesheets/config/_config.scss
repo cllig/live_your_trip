@@ -25,6 +25,9 @@ $tertiary: $orange;
 body {
   background-color: $background;
   color: $text !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
