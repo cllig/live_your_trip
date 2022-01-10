@@ -5,7 +5,7 @@
 <p>Guide : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
 <p>Ville : <%= @reservation.offer.city %></p>
 <p>Date d'arrivée : <%= @reservation.arrival%></p>
-<p>Durée : <%= @reservation.duree%></p>
+<p>De : <%= @reservation.start_hour%> à <%= @reservation.finish_hour %></p>
 <p>Nombre de participants : <%= @reservation.participant %></p>
 <p>Prix par personne : <%= @reservation.offer.price %></p>
 <p>Prix total : <%= @reservation.offer.price * @reservation.participant %></p>
