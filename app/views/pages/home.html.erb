@@ -1,8 +1,7 @@
 <div class="banner">
 </div>
-
 <div class="pictogramme">
-        <p> Prends ton sac 🎒 </p>
+        <p> À la recherche de <strong>surprise</strong> et <strong>d'inattendu</strong> avec tes potes ? Partez à l'aventure grâce <strong> Live your Trip ! </strong> </p>
       </div>
 
 <div class="container">
@@ -20,10 +19,10 @@
     placeholder: "Date d'arrivée"
  %>
 
-  <%= date_field_tag :departure,
-    params[:departure],
+  <%= time_field_tag :hours,
+    params[:hours],
     class: "form-control",
-    placeholder: "Date de retour"
+    placeholder: "Durée"
  %>
 
   <%= select_tag :theme,
@@ -49,9 +48,6 @@
 </div>
 
   <div class="container">
-    <div class="pictogramme" >
-      <h2 class="mb-5"> Tu cherches </h2>
-    </div>
     <div class="img-home">
       <div class="text-img">
         <%= image_tag("fun.svg", :alt => "picto") %>

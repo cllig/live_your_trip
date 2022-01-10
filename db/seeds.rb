@@ -21,7 +21,7 @@ user10 = User.create(first_name: "Clara", last_name: "Serra", email: "clara@gmai
 user11 = User.create(first_name: "Celine", last_name: "Guisset", email: "celine@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user12 = User.create(first_name: "Baptiste", last_name: "Mas", email: "baptiste@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user13 = User.create(first_name: "Brian", last_name: "Pla", email: "brian@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
-user14 =User.create(first_name: "Caroline", last_name: "Sola", email: "caroline@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
+user14 = User.create(first_name: "Caroline", last_name: "Sola", email: "caroline@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user15 = User.create(first_name: "Sarah", last_name: "Lopez", email: "sarah@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
 user16 = User.create(first_name: "Benoit", last_name: "Torrès", email: "benoit@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
 user17 = User.create(first_name: "Jules", last_name: "Gil", email: "jules@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
@@ -116,6 +116,7 @@ user = User.create(first_name: "Hubert", last_name: "Thomas", email: "hubert@hot
 # Offer.create(price: 12, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Paris", user: user10, title: "Visite du Tracadero", placenumber: 8)
 # Offer.create(price: 15, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user11, title: "Viens visiter la ville Rose !", placenumber: 11)
 # Offer.create(price: 6, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user12, title: "Découvre les incontournables de Toulouse !", placenumber: 10)
+
 file = URI.open('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?ixlib=rb-1.2.1&ixid=MnwxM[…]G90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80')
 file2 = URI.open("https://i.pinimg.com/564x/5c/2e/da/5c2eda34c6587c5780422c3591b9db58.jpg")
 file3 = URI.open("https://cdn.pixabay.com/photo/2017/03/01/16/42/catacombs-2109028_960_720.jpg")
