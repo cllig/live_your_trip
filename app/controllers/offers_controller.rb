@@ -11,6 +11,16 @@ class OffersController < ApplicationController
       @offers = Offer.all
     end
 
+    # if params[:theme].present?
+    #   if params[:theme] == 'Mystère'
+    #     @offers = Offer.all
+    #   else
+    #     @offers = Offer.where(theme: params[:theme])
+    #     @theme = params[:theme]
+    #   end
+    # end
+    
+ 
     if params[:city].present?
       @offers = @offers.where(city: params[:city])
       @city = params[:city]
