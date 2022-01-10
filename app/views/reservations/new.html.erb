@@ -9,10 +9,14 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Réserver" %>
+
+    <%= link_to "Cancel", offer_path(@offer), :class=>"btn kaki-btn" %>
+    <%= f.button :submit, 'Réserver' :class=>"btn orange-btn" %>
+    
   </div>
+  
 
 <% end %>
 
-
+    
 <%= link_to "Annuler", offer_path(@offer), :class=>"red-btn" %>
