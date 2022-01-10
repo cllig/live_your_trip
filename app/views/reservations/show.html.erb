@@ -11,7 +11,7 @@
 <p>Prix total : <%= @reservation.offer.price * @reservation.participant %></p>
 
 <p>Contacter <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
-<%# <p><%= link_to "message", new_chatroom_path </p> %> %>
+<p><%= link_to "Contactez le guide !", new_chatroom_path %></p>
 
 <%= link_to "Modifier", edit_reservation_path(@reservation) %>
 <%= link_to 'Supprimer', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>

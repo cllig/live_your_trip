@@ -1,15 +1,17 @@
 <div class="row col-md-8 col-md-offset-2">
 
-  <h1>Create a Chatroom on a programming topic</h1>
-    <div class="well">
-      <div class="chatroom-form">
-        <%= form_for @chatroom do |f| %>
-          <div class="input-group">
-            <span class="input-group-addon">topic:</span>
-            <%= f.text_field :topic, class: "form-control"%>
-          </div>
-          <%= f.submit class: "btn btn-primary", id: "create-chatroom" %>
-        <% end %>
-      </div>
-    </div>
-</div>
+  <h1>Create a Chatroom</h1>
+    
+    <%= simple_form_for [@chatroom] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>

@@ -1,8 +1,8 @@
 class ChatroomsController < ApplicationController
   
-  # def index
-  #   @chatrooms = Chatroom.all
-  # end
+  def index
+    @chatrooms = Chatroom.all
+  end
 
   def show
     @chatroom = Chatroom.find(params[:id])
@@ -10,26 +10,20 @@ class ChatroomsController < ApplicationController
     @chatrooms = Chatroom.all
   end
 
-  # def new
-  #   if request.referrer.split("/").last == "chatrooms"
-  #     flash[:notice] = nil
-  #   end
-  #   @chatroom = Chatroom.new
-  # end
+  def new
+    @chatroom = Chatroom.new
+  end
 
-  # def create
-  #   @chatroom = Chatroom.new(chatroom_params)
-  #   if @chatroom.save
-  #     respond_to do |format|
-  #       format.html { redirect_to @chatroom }
-  #     end
-  #   else
-  #     respond_to do |format|
-  #       flash[:notice] = {error: ["a chatroom with this topic already exists"]}
-  #       format.html { redirect_to new_chatroom_path }
-  #     end
-  #   end
-  # end
+  def create
+    @chatroom = Chatroom.new(params_chatroom)
+    # @chatroom.name = @user
+    # @chatroom.user = current_user
+    if @chatroom.save
+    redirect_to @chatroom
+    else
+      render :new
+    end
+  end
   
   private
 

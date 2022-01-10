@@ -1,9 +1,9 @@
     <% @chatrooms.each do |chatroom| %>
-      <%= link_to "##{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
+      <%= link_to "#{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
     <% end %>
     
-    <h1>#<%= @chatroom.name %></h1>
-    <div id=“messages” class="h-100" data-chatroom-id="<%= @chatroom.id %>">
+    <h1><%= @chatroom.name %></h1>
+    <div id="messages" class="h-100" data-chatroom-id="<%= @chatroom.id %>">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
       <% end %>
