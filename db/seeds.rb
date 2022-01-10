@@ -8,6 +8,7 @@
 require "open-uri"
 Offer.destroy_all
 User.destroy_all
+Review.destroy_all
 user1 = User.create(first_name: "Jean", last_name: "Dupont", email: "jean@gmail.com", password: "aaaaaa", guide: true, city: "Marseille" )
 user2 = User.create(first_name: "Axel", last_name: "Martin", email: "axel@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
 user3 = User.create(first_name: "Arthur", last_name: "Bernard", email: "arthur@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
@@ -117,7 +118,8 @@ user = User.create(first_name: "Hubert", last_name: "Thomas", email: "hubert@hot
 # Offer.create(price: 15, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user11, title: "Viens visiter la ville Rose !", placenumber: 11)
 # Offer.create(price: 6, theme: "Balade", theme_description: "Venez vous promener dans ville accompagné de votre guide !", city: "Toulouse", user: user12, title: "Découvre les incontournables de Toulouse !", placenumber: 10)
 
-file = URI.open('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80')
+file = URI.open('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?ixlib=rb-1.2.1&ixid=MnwxM[%E2%80%A6]G90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80')
+
 file2 = URI.open("https://i.pinimg.com/564x/5c/2e/da/5c2eda34c6587c5780422c3591b9db58.jpg")
 file3 = URI.open("https://cdn.pixabay.com/photo/2017/03/01/16/42/catacombs-2109028_960_720.jpg")
 file4 = URI.open("https://cdn.pixabay.com/photo/2017/03/19/13/43/paris-2156511_960_720.jpg")
@@ -159,6 +161,8 @@ offer2.photos.attach(io: file2, filename: 'catacombes1.png', content_type: 'imag
 offer2.photos.attach(io: file3, filename: 'catacombes2.png', content_type: 'image/png')
 offer2.photos.attach(io: file4, filename: 'catacombes3.png', content_type: 'image/png')
 
+
+
 offer3 = Offer.create(price: 8, theme: "Mystère", city: "Paris", user: user3, title: "Découvrez des lieux de tournage !", placenumber: 10)
 offer3.photos.attach(io: file5, filename: 'bar.png', content_type: 'image/png')
 
@@ -188,3 +192,11 @@ offer11.photos.attach(io: file13, filename: 'bar.png', content_type: 'image/png'
 
 # offer12 = Offer.create(price: 12, theme: "Mystère", city: "Paris", user: user11, title: " Retrouvez le bossu de Notre-Dame !", placenumber: 10)
 # offer12.photos.attach(io: file13, filename: 'bar.png', content_type: 'image/png')
+
+review1 = Review.create(rating: 5, user: user1, offer: offer2, content: "Journée incroyable avec Axel, superbe découverte, je recommande !", visiting_date: "03/01/2022")
+review2 = Review.create(rating: 4, user: user3, offer: offer2, content: "Aprem fantastique avec Axel, une activité que je n'aurais jamais faites sans lui, merci !", visiting_date: "12/11/2021")
+review3 = Review.create(rating: 4, user: user4, offer: offer2, content: "Axel est super cool et sympa, l'activité est top, foncez !", visiting_date: "17/12/2021")
+review4 = Review.create(rating: 5, user: user5, offer: offer2, content: "Le meilleur Halloween que j'ai passé grâce à Axel, encore merci !", visiting_date: "31/10/2012")
+review5 = Review.create(rating: 4, user: user6, offer: offer2, content: "Hyper cool, très loin des activités touristiques grâce à un guide au top !", visiting_date: "15/09/2021")
+review6 = Review.create(rating: 5, user: user7, offer: offer2, content: "Très bon moment en compagnie d'Axel, merci encore pour cette belle découverte !", visiting_date: "08/08/2021")
+
