@@ -27,16 +27,23 @@
   </a>
 </div>
 
-<div class="user-avatar">
-<%= image_tag "traveller.png" %>
-</div>
-<div class="user">
-<%= @offer.user.first_name %>
-</div>
-<div class= "details">
-<div class="description">
-<h2> <%= @offer.description %> </h2>
-</div>
+    
+
+<div class="container d-flex">
+  <div class="profile-user">
+  <%= image_tag "traveller.png", class:"user-avatar" %>
+  </div>
+  <div class="user">
+  <%= @offer.user.first_name %>
+  </div>
+  
+  <div class= "details">
+  </div>
+  <div class="description">
+  <h2> <%= @offer.description %> </h2>
+  </div>
+  </div>
+
 <div class ="reservations">
 
 <%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city), class: "kaki-btn" %>
@@ -44,7 +51,5 @@
 
 <%= link_to "edit", edit_offer_path, class: "orange-btn" %>
 
-</div>
-</div>
 </div>
 </div>
