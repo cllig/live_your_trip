@@ -33,6 +33,8 @@ class OffersController < ApplicationController
     @city = params[:city]
     @price = params[:price]
     @placenumber = params[:placenumber]
+    @reviews = @offer.reviews
+    @review = Review.new
   end
 
   def new
