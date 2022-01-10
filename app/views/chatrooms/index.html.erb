@@ -1,4 +1,7 @@
-    <% @chatrooms.each do |chatroom| %>
-        <%= link_to "#{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
+    <% if @chatrooms.empty? %>
+        <%= "Vous n'avez pas de messages" %>
+    <% else %>
+        <% @chatrooms.each do |chatroom| %>
+            <%= link_to "#{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
+        <% end %>
     <% end %>
-    
