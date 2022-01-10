@@ -1,11 +1,11 @@
 <h1>Reservation</h1>
 
 <h2>Details of your reservation:</h2>
-    
+
 <p>Guide : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
 <p>Ville : <%= @reservation.offer.city %></p>
 <p>Date d'arrivée : <%= @reservation.arrival%></p>
-<p>Date de départ : <%= @reservation.departure%></p>
+<p>Durée : <%= @reservation.duree%></p>
 <p>Nombre de participants : <%= @reservation.participant %></p>
 <p>Prix par personne : <%= @reservation.offer.price %></p>
 <p>Prix total : <%= @reservation.offer.price * @reservation.participant %></p>
