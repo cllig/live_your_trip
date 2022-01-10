@@ -1,5 +1,5 @@
 class Offer < ApplicationRecord
-  THEME = ["Gastronomie", "Festif", "Sportif", "Culturel", "Balades", "Artistique", "Detente", "Découverte", "Paranormal", "Urbex"]
+  THEME = ["Food", "Festif", "Sportif", "Culturel", "Vadrouille", "Détente", "Urbex", "Mystère"]
 
   belongs_to :user
   has_many :reservations, dependent: :destroy

@@ -1,8 +1,8 @@
 <div class="container-booking-card">
-  <li class="booking-card">
-    <%= cl_image_tag offer.photos.first.key, crop: :fill, :style =>"background-image", :class => "card__image" %>
+  <li class="booking-card" style="background-image:url(<%= cl_image_path offer.photos.first.key, crop: :fill, :style =>"background-image", :class => "card__image" %>);">
     <div class="book-container">
       <div class="content">
+
       </div>
     </div>
     <div class="informations-container">
