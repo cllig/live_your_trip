@@ -5,7 +5,8 @@
   <div class="form-inputs">
 
     <%= f.input :arrival, label: 'Date de départ'%>
-    <%= f.input :duree, label: 'Durée'%>
+    <%= f.input :start_hour, label: 'Heure de départ'%>
+    <%= f.input :finish_hour, label: 'Heure de fin'%>
     <%= f.input :participant, label: 'Nombre de participants', placeholder: @placenumber %>
   </div>
 
@@ -13,9 +14,15 @@
 
     <%= link_to "Annuler", offer_path(@offer), :class=>"btn kaki-btn" %>
 
-    <%= f.button :submit, "Réserver", :class=>"btn orange-btn" %>
-    
+
+    <%= f.button :submit, 'Réserver', class:"btn orange-btn" %>
+
+
   </div>
-  
+
 
 <% end %>
+
+
+<%= link_to "Annuler", offer_path(@offer), :class=>"red-btn" %>
+

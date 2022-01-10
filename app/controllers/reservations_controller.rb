@@ -52,7 +52,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:departure, :arrival, :user_id, :offer_id, :participant)
+    params.require(:reservation).permit(:departure, :arrival, :start_hour, :finish_hour, :user_id, :offer_id, :participant)
   end
 
   def set_reservation
