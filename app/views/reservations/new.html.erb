@@ -3,14 +3,17 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
+
     <%= f.input :arrival, label: 'Date de départ'%>
-    <%= f.input :departure, label: 'Date de fin'%>
+    <%= f.input :duree, label: 'Durée'%>
     <%= f.input :participant, label: 'Nombre de participants', placeholder: @placenumber %>
   </div>
 
   <div class="form-actions">
 
     <%= link_to "Cancel", offer_path(@offer), :class=>"btn kaki-btn" %>
+
+
     <%= f.button :submit, 'Réserver' :class=>"btn orange-btn" %>
     
   </div>

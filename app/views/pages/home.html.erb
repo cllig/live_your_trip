@@ -19,10 +19,10 @@
     placeholder: "Date d'arrivée"
  %>
 
-  <%= date_field_tag :departure,
-    params[:departure],
+  <%= time_field_tag :hours,
+    params[:hours],
     class: "form-control",
-    placeholder: "Date de retour"
+    placeholder: "Durée"
  %>
 
   <%= select_tag :theme,
