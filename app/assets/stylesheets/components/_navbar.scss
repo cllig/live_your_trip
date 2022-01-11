@@ -10,3 +10,14 @@
 .navbar-lewagon .navbar-brand img {
   width: 190px;
 }
+
+.navbar-lewagon .navbar-brand a:hover {
+  background-color: $orange;
+
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fffffe;
+    text-decoration: none;
+    background-color: $lightorange;
+}
