@@ -1,0 +1,74 @@
+
+/* General */
+*{
+  box-sizing:border-box;
+  outline:none;
+}
+
+.profile-user-review {
+  display:flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.content p {
+  padding: 5px;
+
+}
+.user-avatar-review {
+  width:  50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+/* Card */
+.card{
+  @include box-shadow(0 3px 10px rgba(0,0,0,0.5));
+
+  display:block;
+  position:relative;
+  padding:20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card{
+  .card-image{
+    position:absolute;
+    top:20px;
+    left:20px;
+  }
+}
+
+.card{
+  .card-info{
+    margin-left:120px;
+  }
+}
+
+
+.card{
+  .card-info{
+    .name{
+
+      font-size:28px;
+      font-weight:100;
+
+      display:inline-block;
+      vertical-align:top;
+      position:relative;
+    }
+  }
+}
+
+
+.card{
+  .card-info{
+    hr{
+      margin:0 0 15px;
+    }
+  }
+}

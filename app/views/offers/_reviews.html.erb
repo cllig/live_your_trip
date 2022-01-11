@@ -1,0 +1,17 @@
+<% @reviews.each do |review| %>
+    <div class="col-xs-12">
+      <div class="card">
+    <div class="profile-user-review">
+  <%= image_tag "traveller.png", class:"user-avatar-review" %>
+  <h5><%= review.user.first_name %></h5>
+  <div class="name">
+          <p><%= review.rating ? "⭐" * review.rating : "Pas de note" %></p>
+          <p><strong><%= review.visiting_date %></strong></p>
+          </div>
+ </div>
+          <div class="content">
+          <p><%= review.content %></p>
+          </div>
+      </div>
+    </div>
+  <% end  %>
