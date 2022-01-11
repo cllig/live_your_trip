@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_163331) do
     t.string "last_name"
     t.string "first_name"
     t.string "city"
-    t.boolean "guide"
+    t.boolean "guide", default: false
     t.integer "rating_number"
     t.text "rating_content"
     t.text "description"

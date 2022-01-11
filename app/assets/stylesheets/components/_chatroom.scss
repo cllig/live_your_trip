@@ -1,0 +1,48 @@
+.container {
+  height: 100%;
+}
+
+.chatroom-name {
+  background-color: $orange;
+  border: 2px solid rgb(235, 235, 235);
+  padding: 5px;
+  width: 222px;
+  border-radius: 14px 0 0 14px;
+}
+
+.list-group-item {
+  background-color: $orange;
+  border-color: $orange;
+}
+
+
+.list-group-item:hover,
+.list-group-item.active {
+  background-color: $lightorange;
+  border-color: $lightorange;
+  text-decoration: none;
+}
+
+.container-chatroom {
+  display: flex;
+  height: 100%;
+}
+
+.chatbox {
+  width: 100%;
+  background-color: $white;
+  border: 2px solid rgb(235, 235, 235);
+  padding: 5px;
+  position: relative;
+  border-radius: 0 14px 14px 0;
+}
+
+.message {
+  margin-bottom: 55px;
+}
+
+.message-form {
+  position: absolute;
+  bottom: -11px;
+  width: 99%;
+}
