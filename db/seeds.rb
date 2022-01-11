@@ -132,8 +132,12 @@ file10 = URI.open("https://images.unsplash.com/photo-1632658443249-f2d8c2abd60c?
 file11 = URI.open("https://images.unsplash.com/photo-1614794663647-1b56a77e903b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
 file12 = URI.open("https://images.unsplash.com/photo-1489348611450-4c0d746d949b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80")
 file13 = URI.open("https://images.unsplash.com/photo-1513542328669-daa7f8962b01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-# file14 = URI.open("https://images.unsplash.com/photo-1489348611450-4c0d746d949b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80")
-# file15 = URI.open("https://images.unsplash.com/photo-1513542328669-daa7f8962b01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+file14 = URI.open("https://images.unsplash.com/photo-1520503652613-5a55d772ec77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+file15 = URI.open("https://images.unsplash.com/photo-1495442358998-961b69f45703?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+file16 = URI.open("https://images.unsplash.com/photo-1561555804-4b9e0848fdbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")
+file17 = URI.open("https://cdn.pixabay.com/photo/2014/08/28/14/55/hieroglyphics-429863_1280.jpg")
+file18 = URI.open("https://cdn.pixabay.com/photo/2021/06/22/16/39/arch-6356637_1280.jpg")
+file19 = URI.open("https://cdn.pixabay.com/photo/2018/03/02/17/19/paris-3193674_1280.jpg")
 # offer = Offer.create(price: 35, theme: "Culturel", theme_description: " Decouvrez le mucem autrement!", city: "Marseille", user: user1, title: "Mucem by night", placenumber: 8, description: "Hey ! J'ai 34 ans, je suis passioné par la culture en tout genre mais mon musée préféré reste le mucem ! Il mélange art et architecture ! Mes 2 passions réunis ! J'espère pourvoir vous la transmettre ! A très vite pour une visite")
 # offer.photos.attach(io: file, filename: 'mucem.png', content_type: 'image/png')
 # offer.photos.attach(io: file2, filename: 'mucem1.png', content_type: 'image/png')
@@ -184,14 +188,31 @@ offer8.photos.attach(io: file10, filename: 'bar.png', content_type: 'image/png')
 offer9 = Offer.create(price: 13, theme: "Mystère", city: "Paris", user: user9, title: "Père Lachaise rites et mystères ! ", placenumber: 10)
 offer9.photos.attach(io: file11, filename: 'bar.png', content_type: 'image/png')
 
-offer10 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user10, title: "Chasse aux trésors ! ", placenumber: 10)
+offer10 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user10, title: "Chasse aux trésors ! ", placenumber: 10, description: "Hey ! 
+  Et si on jouait ensemble à découvrir Paris et ses recoins cachés à travers une véritable chasse aux trésors ? 
+  En tant qu’habitante de Paris depuis plusieurs années, je vais vous dévoiler de nombreux lieux méconnus et d'autres plus incontournables. 
+  C’est parti transformez-vous en Pirate des villes !")
 offer10.photos.attach(io: file12, filename: 'bar.png', content_type: 'image/png')
+offer10.photos.attach(io: file18, filename: 'catacombes2.png', content_type: 'image/png')
+offer10.photos.attach(io: file19, filename: 'catacombes3.png', content_type: 'image/png')
 
 offer11 = Offer.create(price: 12, theme: "Mystère", city: "Paris", user: user11, title: " Retrouvez le bossu de Notre-Dame !", placenumber: 10)
 offer11.photos.attach(io: file13, filename: 'bar.png', content_type: 'image/png')
 
-# offer12 = Offer.create(price: 12, theme: "Mystère", city: "Paris", user: user11, title: " Retrouvez le bossu de Notre-Dame !", placenumber: 10)
-# offer12.photos.attach(io: file13, filename: 'bar.png', content_type: 'image/png')
+offer12 = Offer.create(price: 18, theme: "Mystère", city: "Paris", user: user12, title: " Jeu de piste !", placenumber: 10)
+offer12.photos.attach(io: file14, filename: 'bar.png', content_type: 'image/png')
+
+offer13 = Offer.create(price: 16, theme: "Mystère", city: "Paris", user: user13, title: " Découvrez un Paris inconnu !", placenumber: 10)
+offer13.photos.attach(io: file15, filename: 'bar.png', content_type: 'image/png')
+
+offer14 = Offer.create(price: 17, theme: "Mystère", city: "Paris", user: user14, title: " La folle architecture de la destruction !", placenumber: 10)
+offer14.photos.attach(io: file16, filename: 'bar.png', content_type: 'image/png')
+
+offer15 = Offer.create(price: 14, theme: "Mystère", city: "Paris", user: user15, title: " Partez à la rencontre de votre histoire !", placenumber: 10)
+offer15.photos.attach(io: file17, filename: 'bar.png', content_type: 'image/png')
+
+# offer16 = Offer.create(price: 10, theme: "Mystère", city: "Paris", user: user15, title: " Partez à la rencontre de votre histoire !", placenumber: 10)
+# offer16.photos.attach(io: file18, filename: 'bar.png', content_type: 'image/png')
 
 review1 = Review.create(rating: 5, user: user1, offer: offer2, content: "Journée incroyable avec Axel, superbe découverte, je recommande !", visiting_date: "03/01/2022")
 review2 = Review.create(rating: 4, user: user3, offer: offer2, content: "Aprem fantastique avec Axel, une activité que je n'aurais jamais faites sans lui, merci !", visiting_date: "12/11/2021")
