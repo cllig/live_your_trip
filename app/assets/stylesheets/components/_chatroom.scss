@@ -21,6 +21,7 @@
   background-color: $lightorange;
   border-color: $lightorange;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .container-chatroom {
@@ -37,8 +38,9 @@
   border-radius: 0 14px 14px 0;
 }
 
-.message {
+.box-messages {
   margin-bottom: 55px;
+  margin-top: 10px;
 }
 
 .message-form {
@@ -46,3 +48,32 @@
   bottom: -11px;
   width: 99%;
 }
+
+.message-container {
+  text-align: left;
+  .background-messages {
+    background-color: $beige;
+  }
+}
+
+// //     box-sizing: border-box;
+// //     background-color: $beige;
+// //     border-radius: 4px;
+// //     width: 90%;
+// //     // display: inline-block;
+
+//   }
+  
+.current-user-message {
+  text-align: right;
+  .background-messages {
+    background-color: $sand;
+  }
+}
+//     box-sizing: border-box;
+//     background-color: $sand;
+//     border-radius: 4px;
+//     display: inline-block;
+//     // float: right;
+//     justify-content: right;
+  
