@@ -46,7 +46,7 @@
   <div class ="reservations">
 
   <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn btn-lg btn-block" %>
-  <%= link_to "edit", edit_offer_path, class: "orange-btn btn-lg btn-block" %>
+  <%= link_to "Edit", edit_offer_path, class: "orange-btn btn-lg btn-block" %>
     <%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city), class: "kaki-btn btn-lg btn-block" %>
   </div>
 </div>
