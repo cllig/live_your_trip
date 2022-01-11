@@ -9,8 +9,13 @@ require "open-uri"
 Offer.destroy_all
 User.destroy_all
 Review.destroy_all
+
+file20 = URI.open("https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
+file21 = URI.open("https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+
 user1 = User.create(first_name: "Jean", last_name: "Dupont", email: "jean@gmail.com", password: "aaaaaa", guide: true, city: "Marseille" )
-user2 = User.create(first_name: "Axel", last_name: "Martin", email: "axel@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
+user2 = User.create(first_name: "Axel", last_name: "Martin", email: "axel@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
+user2.photo.attach(io: file21, filename: 'bar.png', content_type: 'image/png')
 user3 = User.create(first_name: "Arthur", last_name: "Bernard", email: "arthur@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
 user4 = User.create(first_name: "Evan", last_name: "Thomas", email: "evan@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
 user5 = User.create(first_name: "Antoine", last_name: "Richard", email: "antoine@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
@@ -19,6 +24,7 @@ user7 = User.create(first_name: "Alexandre", last_name: "Dubois", email: "alexan
 user8 = User.create(first_name: "Carmen", last_name: "Garcia", email: "carmen@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
 user9 = User.create(first_name: "Cesar", last_name: "Blanc", email: "cesar@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
 user10 = User.create(first_name: "Clara", last_name: "Serra", email: "clara@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
+user10.photo.attach(io: file20, filename: 'bar.png', content_type: 'image/png')
 user11 = User.create(first_name: "Celine", last_name: "Guisset", email: "celine@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user12 = User.create(first_name: "Baptiste", last_name: "Mas", email: "baptiste@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user13 = User.create(first_name: "Brian", last_name: "Pla", email: "brian@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
@@ -138,6 +144,7 @@ file16 = URI.open("https://images.unsplash.com/photo-1561555804-4b9e0848fdbe?ixl
 file17 = URI.open("https://cdn.pixabay.com/photo/2014/08/28/14/55/hieroglyphics-429863_1280.jpg")
 file18 = URI.open("https://cdn.pixabay.com/photo/2021/06/22/16/39/arch-6356637_1280.jpg")
 file19 = URI.open("https://cdn.pixabay.com/photo/2018/03/02/17/19/paris-3193674_1280.jpg")
+
 # offer = Offer.create(price: 35, theme: "Culturel", theme_description: " Decouvrez le mucem autrement!", city: "Marseille", user: user1, title: "Mucem by night", placenumber: 8, description: "Hey ! J'ai 34 ans, je suis passioné par la culture en tout genre mais mon musée préféré reste le mucem ! Il mélange art et architecture ! Mes 2 passions réunis ! J'espère pourvoir vous la transmettre ! A très vite pour une visite")
 # offer.photos.attach(io: file, filename: 'mucem.png', content_type: 'image/png')
 # offer.photos.attach(io: file2, filename: 'mucem1.png', content_type: 'image/png')
