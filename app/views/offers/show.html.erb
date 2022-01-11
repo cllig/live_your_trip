@@ -32,7 +32,6 @@
 <div class="container d-flex">
   <div class="profile-user">
   <%= cl_image_tag(@offer.user.photo.key) %>
-  </div>
   <div class="user">
   <%= @offer.user.first_name %>
   <%= @offer.user.last_name  %>
@@ -53,7 +52,7 @@
 </div>
 
 <div class ="reviewcontainer">
-<div class ="form">
+<div class ="forms">
 <%= render "reviews/reviewsform", offer: @offer, review: @review %>
 </div>
 <%= render 'reviews' %>
