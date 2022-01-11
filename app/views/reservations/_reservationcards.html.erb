@@ -1,0 +1,28 @@
+<div class="reservation_container">
+  <h1>Détails de votre prochaine aventure</h1>
+
+    <div class="details_card">
+        <div class="details">
+          <h2>Next Stop <%= @reservation.offer.city %></h2> <i class="fas fa-map-marked-alt"></i>
+        </div>
+
+            <div class="row">
+              <div class="infos col-6">
+                  <p>Guide : <strong> <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></strong></p>
+                  <p>Nombre de participants :<strong> <%= @reservation.participant %></strong></p>
+                  <p>Prix par personne :<strong> <%= @reservation.offer.price %></strong></p>
+                </div>
+
+              <div class="price-info col-6">
+                  <p>Date d'arrivée :<strong> <%= @reservation.arrival%></strong></p>
+                  <p>De : <strong><%= @reservation.start_hour%> </strong>à <strong><%= @reservation.finish_hour %></strong></p>
+                  <p>Prix total : <strong><%= @reservation.offer.price * @reservation.participant %></strong></p>
+                    <i class="fas fa-barcode"></i>
+              </div>
+            </div>
+          </div>
+          <%= link_to 'Supprimer', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn kaki-btn" %></td>
+
+          <%= link_to "Modifier", edit_reservation_path(@reservation), class:"orange-btn"%>
+          <%= link_to "Contactez le guide !", new_chatroom_path, class:"orange-btn" %>
+        </div>
