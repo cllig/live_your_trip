@@ -31,36 +31,31 @@
 
 <div class="container d-flex">
   <div class="profile-user">
-  <%= image_tag "traveller.png", class:"user-avatar" %>
+  <%= cl_image_tag(@offer.user.photo.key) %>
   </div>
   <div class="user">
   <%= @offer.user.first_name %>
   <%= @offer.user.last_name  %>
   </div>
+  </div>
 
   <div class= "details">
   </div>
   <div class="description">
-  <h2> <%= @offer.description %> </h2>
+  <p> <%= @offer.description %> </p>
   </div>
+  <div class ="reservations">
+
+  <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn btn-lg btn-block" %>
+  <%= link_to "edit", edit_offer_path, class: "orange-btn btn-lg btn-block" %>
+    <%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city), class: "kaki-btn btn-lg btn-block" %>
   </div>
-
-<div class ="reservations">
-
-<%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city), class: "kaki-btn" %>
-<%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn" %>
-
-<%= link_to "edit", edit_offer_path, class: "orange-btn" %>
-
-</div>
 </div>
 
+<div class ="reviewcontainer">
+<div class ="form">
 <%= render "reviews/reviewsform", offer: @offer, review: @review %>
-
-<div class ="reviews">
-<% @reviews.each do |review| %>
-<h5><%= review.user.first_name %> <%= review.visiting_date %></h5>
-<p><%= review.rating %></p>
-<p><%= review.content %></p>
-<% end  %>
+</div>
+<%= render 'reviews' %>
+</div>
 </div>
