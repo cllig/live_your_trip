@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :offers
   has_many :messages, dependent: :destroy
-  has_one_attached :avatar
+  has_one_attached :photo
 
   validates :first_name, presence: true
   validates :last_name, presence: true
