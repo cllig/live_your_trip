@@ -31,7 +31,7 @@
 
 <div class="container d-flex">
   <div class="profile-user">
-  <%= image_tag "traveller.png", class:"user-avatar" %>
+  <%= cl_image_tag(@offer.user.photo.key) %>
   </div>
   <div class="user">
   <%= @offer.user.first_name %>
