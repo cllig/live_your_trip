@@ -1,0 +1,29 @@
+
+.container h1 {
+  margin-bottom : 40px;
+}
+
+.container h2 {
+  margin-bottom: 30px;
+}
+
+.user-reservation {
+  position: relative;
+  display: block;
+  padding: 25px;
+  width: 100%;
+  background-color: $white;
+  // border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  color : #000000;
+}
+
+.reservation-guide {
+  position: relative;
+  display: block;
+  padding: 25px;
+  margin-top: 25px;
+  width: 100%;
+  background-color: #ffffff;
+}

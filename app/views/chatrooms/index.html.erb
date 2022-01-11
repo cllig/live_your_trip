@@ -1,3 +1,4 @@
+    <div class="container">
     <% if @chatrooms.empty? %>
         <%= "Vous n'avez pas de messages" %>
     <% else %>
@@ -5,3 +6,4 @@
             <%= link_to "#{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
         <% end %>
     <% end %>
+</div>

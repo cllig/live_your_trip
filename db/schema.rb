@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_163331) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.float "price"
+    t.integer "price"
     t.string "theme"
     t.string "city"
     t.bigint "user_id", null: false
