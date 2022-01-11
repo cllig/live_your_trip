@@ -1,0 +1,58 @@
+.reservation_container {
+  width: 65%;
+  margin: 0 auto;
+  font-family: $body-font;
+}
+
+.reservation_container h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.details_card {
+  border-radius: 15px;
+  background-color: $white;
+  height: 330px;
+  box-shadow: 0 3px 10px grey;
+  margin-bottom: 20px;
+}
+
+.details {
+  width: 100%;
+  background-color: $orange;
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.details h2 {
+  color: $white!important;
+}
+
+.details .fa-map-marked-alt {
+  color: $white;
+  font-size: 50px;
+  margin-left: 330px;
+}
+
+.infos {
+  border-right: 3px dotted $black;
+  height: 239px;
+}
+
+.price-info .fa-barcode {
+  color: $black;
+  font-size: 100px;
+  margin-left: 175px;
+  margin-top: -15px;
+}
+
+.price-info p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.infos p {
+  text-align: center;
+  margin-top: 30px;
+}

@@ -1,17 +1,1 @@
-<h1>Reservation</h1>
-
-<h2>Details of your reservation:</h2>
-
-<p>Guide : <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
-<p>Ville : <%= @reservation.offer.city %></p>
-<p>Date d'arrivée : <%= @reservation.arrival%></p>
-<p>De : <%= @reservation.start_hour%> à <%= @reservation.finish_hour %></p>
-<p>Nombre de participants : <%= @reservation.participant %></p>
-<p>Prix par personne : <%= @reservation.offer.price %></p>
-<p>Prix total : <%= @reservation.offer.price * @reservation.participant %></p>
-
-<p>Contacter <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></p>
-<p><%= link_to "Contactez le guide !", new_chatroom_path %></p>
-
-<%= link_to "Modifier", edit_reservation_path(@reservation) %>
-<%= link_to 'Supprimer', @reservation, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"purple-btn" %></td>
+ <%= render 'reservations/reservationcards', reservation: @reservation %>
