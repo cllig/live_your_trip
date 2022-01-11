@@ -12,39 +12,51 @@
 .details_card {
   border-radius: 15px;
   background-color: $white;
-  height: 330px;
   box-shadow: 0 3px 10px grey;
   margin-bottom: 20px;
 }
 
 .details {
+  display:flex;
   width: 100%;
   background-color: $orange;
   padding: 20px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+      justify-content: space-between;
 }
 
 .details h2 {
   color: $white!important;
 }
 
+.icon {
+
+  display: block;
+  float: left;
+}
 .details .fa-map-marked-alt {
   color: $white;
   font-size: 50px;
-  margin-left: 330px;
 }
 
 .infos {
   border-right: 3px dotted $black;
-  height: 239px;
+}
+
+.title {
+  display: flex;
+}
+
+.icon {
+  display: inline-block;
 }
 
 .price-info .fa-barcode {
   color: $black;
   font-size: 100px;
-  margin-left: 175px;
-  margin-top: -15px;
+  // margin-left: 175px;
+  // margin-top: -15px;
 }
 
 .price-info p {
