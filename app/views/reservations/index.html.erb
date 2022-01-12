@@ -1,35 +1,39 @@
 
 <div class="container">
 <h1>Bonjour <%= @user.first_name %></h1>
-<div class="user-reservation">
-<h2>Vos réservations</h2>
-<%# reservation faites %>
-<p><%= "Vous n'avez pas fait de réservation" if @reservation_requests.empty?%></p>
-<% @reservation_requests.each do |reservation| %>
+  <div class="profile">
+    <div class="pending_reservations">
+    <div class="title-reservation"><h2>Vos demandes de reservations</h2></div>
+      <h2><%= "Ils vous ont réservés en tant que guide pour : " if @reservation_demands.present? %></h2>
+    <% @reservation_demands.each do |reservation| %>
+    <li>
+      <p><%= reservation.offer.title %> à <%= reservation.offer.city %></p>
+      <p><%= reservation.user.first_name %> <%= reservation.user.last_name %></p>
+      <p>Du <strong><%= reservation.arrival %></strong> au <strong> <%= reservation.departure %></strong></p>
+      <p><strong>Nombre de voyageurs</strong> <%= reservation.participant %></p>
+      <div class="links">
+      <p><%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %></p>
+      </div>
+    </li>
+      <% end %>
+    </div>
+      <div class="user_reservations">
+   <div class="title-reservation"><h2>Vos réservations</h2></div>
+      <%# reservation faites %>
+    <p><%= "Vous n'avez pas fait de réservation" if @reservation_requests.empty?%></p>
+    <% @reservation_requests.each do |reservation| %>
   <li>
     <p>Votre réservation: <%= reservation.offer.title %>, à <%= reservation.offer.city %></p>
     <p>Du <%= reservation.arrival %> au <%= reservation.departure %></p>
     <p>Nombre de voyageurs <%= reservation.participant %></p>
-    <p><%= link_to 'Voir détails', reservation_path(reservation), class: "orange-btn" %></p>
-    <p><%= link_to 'Modifier', edit_reservation_path(reservation), class: "orange-btn" %></p>
-    <p><%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %></p>
   </li>
-<% end %>
-</div>
-
-<%# réservations pour un guide %>
-<div class="reservation-guide">
-<h2>Vos demandes de reservations</h2>
-<h2><%= "Ils vous ont réservés en tant que guide pour : " if @reservation_demands.present? %></h2>
-  <% @reservation_demands.each do |reservation| %>
-    <li>
-      <p><%= reservation.offer.title %>, à <%= reservation.offer.city %></p>
-      <p><%= reservation.user.first_name %> <%= reservation.user.last_name %></p>
-      <p>Du <%= reservation.arrival %> au <%= reservation.departure %></p>
-      <p>Nombre de voyageurs <%= reservation.participant %></p>
-
-      <p><%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "red-btn" %></p>
-    </li>
+  <div class="links">
+   <%= link_to 'Voir détails', reservation_path(reservation), class: "orange-btn" %>
+   <%= link_to 'Modifier', edit_reservation_path(reservation), class: "orange-btn" %>
+   <%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "orange-btn" %>
+  </div>
   <% end %>
+    </div>
+    </div>
   </div>
 </div>
