@@ -9,9 +9,6 @@
     </div>
         
     <div class='chatbox'>
-      <div class='chatbox-name'>
-        <h3><%= @chatroom.name %></h3>
-      </div>
       <div id="messages" class="box-messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
           <%= render "messages/message", message: message, current_user: current_user %>
@@ -19,7 +16,12 @@
       </div>
       <div class='message-form'>
         <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-          <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
+        <div class='input-message'>
+          <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}"%>
+        </div>
+        <div class='send-message'>
+            <%= image_submit_tag("send.png") %>
+          </div>
         <% end %>
       </div>
     </div>
