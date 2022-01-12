@@ -4,26 +4,95 @@
 }
 
 .container h2 {
-  margin-bottom: 30px;
+  margin: 20px;
 }
 
-.user-reservation {
+
+.profile_container {
+ width: 900px;
+ margin: 0 auto;
+
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.pending_reservations {
   position: relative;
   display: block;
-  padding: 25px;
-  width: 100%;
-  background-color: $white;
+  background-color: #ffffff;
   // border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
   color : #000000;
+  // border-radius: 15px;
+  background-color: $white;
+  // box-shadow: 0 3px 10px grey;
+  margin-bottom: 20px;
 }
 
-.reservation-guide {
-  position: relative;
-  display: block;
-  padding: 25px;
-  margin-top: 25px;
-  width: 100%;
+
+.pending_reservations h1 {
+  color : #000000;
+  margin: 30px
+}
+
+.pending_reservations p {
+  margin: 30px;
+}
+
+.pending_reservations span {
+  margin: 30px
+}
+
+.btns {
+  text-align: right;
+  margin: 0 10px;
+}
+
+.user_reservations {
+  margin: 0 auto;
   background-color: #ffffff;
+  // border-radius: 15px;
+  // box-shadow: 0 3px 10px grey;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.user_reservations h1 {
+  color : #000000;
+  margin: 30px
+}
+
+.user_reservations p {
+  margin: 20px;
+}
+
+.user_reservations span {
+  margin: 30px
+}
+
+.user_reservations .red-btn {
+  float:right;
+  margin: 15px;
+}
+
+.title-reservation {
+  display: flex;
+  background-color: $orange;
+}
+
+.title-reservation h2{
+  color: white!important;
 }
