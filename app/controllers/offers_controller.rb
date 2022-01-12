@@ -45,6 +45,7 @@ class OffersController < ApplicationController
     @placenumber = params[:placenumber]
     @reviews = @offer.reviews
     @review = Review.new
+    # @reviewu = Review.find(params[:review_id])
   end
 
   def new
