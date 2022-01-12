@@ -15,7 +15,7 @@
 
               <div class="price-info col-6">
                   <p>Date d'arrivée :<strong> <%= @reservation.arrival%></strong></p>
-                  <p>De : <strong><%= @reservation.start_hour%> </strong>à <strong><%= @reservation.finish_hour %></strong></p>
+                  <p>De : <strong><%= @reservation.start_hour.strftime('%H:%M:%S') %> </strong>à <strong><%= @reservation.finish_hour.strftime('%H:%M:%S') %></strong></p>
                   <p>Prix total : <strong><%= @reservation.offer.price * @reservation.participant %></strong></p>
                    <p> <i class="fas fa-barcode"></i></p>
               </div>
