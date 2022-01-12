@@ -23,11 +23,12 @@
   padding: 20px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-      justify-content: space-between;
+  justify-content: space-between;
 }
 
 .details h2 {
   color: $white!important;
+  vertical-align:middle;
 }
 
 
@@ -46,6 +47,7 @@
 
 .icon {
   display: inline-block;
+  width: 150px;
 }
 
 .price-info .fa-barcode {
