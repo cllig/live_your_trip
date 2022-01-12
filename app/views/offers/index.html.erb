@@ -2,6 +2,8 @@
 <div class='title-card'><h1> Toutes nos activités !</h1>
 </div>
 
+<div class="black-bar"></div>
+
 <div class='align-card'>
 <% @offers.each do | offer | %>
 
@@ -9,4 +11,6 @@
 <% end %>
 </div>
 
-<%= link_to "back", root_path, class:"btn kaki-btn"%>
+<div class="back-btn">
+  <%= link_to "Précédent", root_path, class:"btn kaki-btn btn-lg"%>
+</div>

@@ -1,15 +1,28 @@
-<h1>Nouvelle conversation</h1>
-    
-<div class="row col-md-8 col-md-offset-2">
-    <%= simple_form_for [@chatroom] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-lg-6 B">
+      <div class="full-page">
+        <div class="new-chatroom">
+          <div class="new-chatroom-form">
+            <h3>Nouvelle conversation</h3>
+            <%= simple_form_for [@chatroom] do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            <div class="form-inputs-chatroom">
+              <%= f.input :name, label: 'Nom de la conversation', placeholder: @chatroom.name%>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.input :name, label: 'Nom de la conversation', placeholder: @chatroom.name%>
+            <div class="form-actions-chatroom">
+              <%= f.button :submit, 'Envoyer un message', class: "orange-btn btn-lg"%>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <div class="enveloppes-gif">
+            <%= image_tag url = "https://static.wixstatic.com/media/8ec92f_c1bf319f98bc455590928445cd6e0d33~mv2.gif" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, 'Envoyer un message' %>
-  </div>
-<% end %>
+</div>

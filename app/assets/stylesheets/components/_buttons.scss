@@ -3,21 +3,21 @@
   color: $button_text
 }
 .kaki-btn {
-  background-color: $lightkaki;
-  color: $white!important;
-  box-sizing: border-box;
-  display: inline-block;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 500;
-  list-style: none;
-  // width: 100px;
-  margin: 10px;
-  outline: none;
-  padding: 15px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
+    background-color: #8c7851;
+    max-width: 100px;
+    color: #fffffe !important;
+    box-sizing: border-box;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    margin: 10px;
+    outline: none;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
 }
 
 .kaki-btn-search {
