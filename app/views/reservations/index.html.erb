@@ -23,15 +23,16 @@
     <p><%= "Vous n'avez pas fait de réservation" if @reservation_requests.empty?%></p>
     <% @reservation_requests.each do |reservation| %>
   <li>
-    <p>Votre réservation: <%= reservation.offer.title %>, à <%= reservation.offer.city %></p>
-    <p>Du <%= reservation.arrival %> au <%= reservation.departure %></p>
-    <p>Nombre de voyageurs <%= reservation.participant %></p>
+    <p><strong>Votre réservation :</strong> <%= reservation.offer.title %> à <%= reservation.offer.city %></p>
+    <p><strong>Nombre de voyageurs : </strong> <%= reservation.participant %></p>
   </li>
   <div class="links">
-   <%= link_to 'Voir détails', reservation_path(reservation), class: "orange-btn" %>
-   <%= link_to 'Modifier', edit_reservation_path(reservation), class: "orange-btn" %>
-   <%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "orange-btn" %>
-  </div>
+  <%= link_to 'Voir détails', reservation_path(reservation), class: "orange-btn btn-block" %>
+  <br>
+  <br>
+   <%= link_to 'Modifier', edit_reservation_path(reservation), class: "orange-btn btn-block" %>
+   <%= link_to 'Annuler', reservation_path(reservation), method: :delete, data: {confirm: 'Are you sure?'}, class: "orange-btn " %>
+    </div>
   <% end %>
     </div>
     </div>
