@@ -17,6 +17,8 @@ file23 = URI.open("https://images.unsplash.com/photo-1528892952291-009c663ce843?
 file24 = URI.open("https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 file25 = URI.open("https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 file26 = URI.open("https://images.unsplash.com/photo-1516224498413-84ecf3a1e7fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+file27 = URI.open("https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+file28 = URI.open("https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80")
 
 
 user1 = User.create(first_name: "Jean", last_name: "Dupont", email: "jean@gmail.com", password: "aaaaaa", guide: true, city: "Marseille" )
@@ -37,9 +39,11 @@ user9 = User.create(first_name: "Cesar", last_name: "Blanc", email: "cesar@gmail
 user10 = User.create(first_name: "Clara", last_name: "Serra", email: "clara@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
 user10.photo.attach(io: file20, filename: 'bar.png', content_type: 'image/png')
 user11 = User.create(first_name: "Celine", last_name: "Guisset", email: "celine@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
+user11.photo.attach(io: file27, filename: 'bar.png', content_type: 'image/png')
 user12 = User.create(first_name: "Baptiste", last_name: "Mas", email: "baptiste@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user13 = User.create(first_name: "Brian", last_name: "Pla", email: "brian@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
 user14 = User.create(first_name: "Caroline", last_name: "Sola", email: "caroline@gmail.com", password: "aaaaaa", guide: true, city: "Bordeaux")
+user14.photo.attach(io: file28, filename: 'bar.png', content_type: 'image/png')
 user15 = User.create(first_name: "Sarah", last_name: "Lopez", email: "sarah@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
 user16 = User.create(first_name: "Benoit", last_name: "Torrès", email: "benoit@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
 user17 = User.create(first_name: "Jules", last_name: "Gil", email: "jules@gmail.com", password: "aaaaaa", guide: true, city: "Lyon")
@@ -66,6 +70,7 @@ user37 = User.create(first_name: "Soan", last_name: "Salla", email: "soan@gmail.
 user38 = User.create(first_name: "Come", last_name: "Givre", email: "come@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 user39 = User.create(first_name: "Evan", last_name: "Flocon", email: "evan@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 user40 = User.create(first_name: "Maxime", last_name: "Durant", email: "maxime@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
+user41 = User.create(first_name: "Florine", last_name: "Ponsard", email: "florine@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 User.create(first_name: "Camille", last_name: "Poirier", email: "camille@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 User.create(first_name: "Tom", last_name: "De saxe", email: "tom@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 User.create(first_name: "Léon", last_name: "Girard", email: "leon@gmail.com", password: "aaaaaa", guide: true, city: "Lille")
@@ -178,7 +183,7 @@ offer1.photos.attach(io: file, filename: 'bar.png', content_type: 'image/png')
 # offer5.photos.attach(io: file11, filename: 'velodrome2.png', content_type: 'image/png')
 # offer5.photos.attach(io: file12, filename: 'velodrome3.png', content_type: 'image/png')
 
-offer2 = Offer.create(price: 12, theme: "Mystère", city: "Paris", user: user2, title: "Lieux inaccessible des Catacombes !", placenumber: 10, description: "Salut ! Moi c'est Alex ! J'ai toujours été intéressé par l'histoire de France et de Paris, à tel point que j'ai obtenu un diplôme universitaire en la matière. Après avoir déménagé à Paris il y a de nombreuses années, j'ai commencé à explorer petit à petit les catacombes. Aujourd'hui, je suis devenu expert sur ce lieu. Je passe mes journées à faire des visites dans tout Paris, y compris dans les palais et les musées et à partager l'histoire fascinante de Paris." )
+offer2 = Offer.create(price: 12, theme: "Mystère", city: "Paris", user: user2, title: "Lieux inaccessible des Catacombes !", placenumber: 10, description: "Salut ! Moi c'est Axel !<br> J'ai toujours été intéressé par l'histoire de France et de Paris, à tel point que j'ai obtenu un diplôme universitaire en la matière. Après avoir déménagé à Paris il y a de nombreuses années, j'ai commencé à explorer petit à petit les catacombes. <br> Aujourd'hui, je suis devenu expert sur ce lieu. Je passe mes journées à faire des visites dans tout Paris, y compris dans les palais et les musées et à partager l'histoire fascinante de Paris." )
 offer2.photos.attach(io: file2, filename: 'catacombes1.png', content_type: 'image/png')
 offer2.photos.attach(io: file3, filename: 'catacombes2.png', content_type: 'image/png')
 offer2.photos.attach(io: file4, filename: 'catacombes3.png', content_type: 'image/png')
@@ -206,9 +211,9 @@ offer8.photos.attach(io: file10, filename: 'bar.png', content_type: 'image/png')
 offer9 = Offer.create(price: 13, theme: "Mystère", city: "Paris", user: user9, title: "Père Lachaise rites et mystères ! ", placenumber: 10)
 offer9.photos.attach(io: file11, filename: 'bar.png', content_type: 'image/png')
 
-offer10 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user10, title: "Chasse aux trésors ! ", placenumber: 10, description: "Hey ! 
-  Et si on jouait ensemble à découvrir Paris et ses recoins cachés à travers une véritable chasse aux trésors ? 
-  En tant qu’habitante de Paris depuis plusieurs années, je vais vous dévoiler de nombreux lieux méconnus et d'autres plus incontournables. 
+offer10 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user10, title: "Chasse aux trésors ! ", placenumber: 10, description: "Hey ! <br>
+  Et si on jouait ensemble à découvrir Paris et ses recoins cachés à travers une véritable chasse aux trésors ? <br>
+  En tant qu’habitante de Paris depuis plusieurs années, je vais vous dévoiler de nombreux lieux méconnus et d'autres plus incontournables.<br>
   C’est parti transformez-vous en Pirate des villes !")
 offer10.photos.attach(io: file12, filename: 'bar.png', content_type: 'image/png')
 offer10.photos.attach(io: file18, filename: 'catacombes2.png', content_type: 'image/png')
@@ -241,3 +246,5 @@ review4 = Review.create(rating: 5, user: user5, offer: offer2, content: "Le meil
 review5 = Review.create(rating: 4, user: user6, offer: offer2, content: "Hyper cool, très loin des activités touristiques grâce à un guide au top !", visiting_date: "15/09/2021")
 review6 = Review.create(rating: 5, user: user7, offer: offer2, content: "Très bon moment en compagnie d'Axel, merci encore pour cette belle découverte !", visiting_date: "08/08/2021")
 
+review7 = Review.create(rating: 4, user: user11, offer: offer10, content: "Merci Clara pour cette activité au top !", visiting_date: "06/01/2022")
+review8 = Review.create(rating: 5, user: user14, offer: offer10, content: " Super moment ! Merci à notre guide 😉 ! ", visiting_date: "08/12/2021")

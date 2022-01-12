@@ -2,10 +2,20 @@
     <div class="col-xs-12">
       <div class="card">
     <div class="profile-user-review">
-  <%= cl_image_tag(review.user.photo.key) %>
-  <h5><%= review.user.first_name %></h5>
-  <div class="name">
-          <p><%= review.rating ? "⭐" * review.rating : "Pas de note" %></p>
+       <% if review.user.photo.attached? %>
+        <%= cl_image_tag(review.user.photo.key) %>
+        <% else %>
+        <%= image_tag "traveller.png", class:"user-avatar-review" %>
+        <% end %>
+        <h5><%= review.user.first_name %></h5>
+           <div class="name">
+           <% Review::AUTHORIZED_RATINGS.each do |number| %> 
+            <% if review.rating %>
+              <i class="fa<%= (number > review.rating) ? 'r' : 's' %> fa-star"></i>
+            <% else %>
+              <i class="far fa-star"></i>
+            <% end %>
+            <% end %>
           <p><strong><%= review.visiting_date %></strong></p>
           </div>
  </div>

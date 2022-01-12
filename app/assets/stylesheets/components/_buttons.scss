@@ -72,3 +72,14 @@
   color: $white;
   text-decoration: none;
 }
+
+.sizeback {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+
+  img {
+    width: 40px;
+ 
+  }
+}

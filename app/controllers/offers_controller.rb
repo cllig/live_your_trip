@@ -45,6 +45,7 @@ class OffersController < ApplicationController
     @placenumber = params[:placenumber]
     @reviews = @offer.reviews
     @review = Review.new
+    @average_rating = @reviews.average(:rating)
     # @reviewu = Review.find(params[:review_id])
   end
 
