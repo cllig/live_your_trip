@@ -1,60 +1,66 @@
-<div class="container">
-<div class ="offers">
-<h1><%= @offer.title %></h1>
-
-<p><%= @offer.city %></p></div>
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-  <% @offer.photos.each_with_index do |photo, index| %>
-    <li data-target="#carouselExampleIndicators" data-slide-to="<%= "#{index}" %>" class="active"></li>
-  <% end %>
-  </ol>
-  <div class="carousel-inner">
-    <% @offer.photos.each_with_index do |photo, index| %>
-    <div class="carousel-item carousel-img <%= index == 0 ? "active" : ""%> ">
-        <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide#{index} " %>
-    </div>
+<div class="sizeback">
+    <%= link_to offers_path do %>
+      <%= image_tag "back.png" %>
     <% end %>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
-
-
-<div class="container d-flex">
-  <div class="profile-user">
-  <%= cl_image_tag(@offer.user.photo.key) %>
-  <div class="user">
-  <%= @offer.user.first_name %>
-  <%= @offer.user.last_name  %>
-  </div>
+<div class="container px-4">
+  <div class ="offers">
+    <h1><%= @offer.title %></h1>
+    <p><%= @offer.city %></p>
   </div>
 
-  <div class= "details-show">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <% @offer.photos.each_with_index do |photo, index| %>
+      <li data-target="#carouselExampleIndicators" data-slide-to="<%= "#{index}" %>" class="active"></li>
+    <% end %>
+    </ol>
+    <div class="carousel-inner">
+      <% @offer.photos.each_with_index do |photo, index| %>
+      <div class="carousel-item carousel-img <%= index == 0 ? "active" : ""%> ">
+          <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100", id: "slide#{index} " %>
+      </div>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <div class="description">
-  <p> <%= @offer.description %> </p>
-  </div>
-  <div class ="reservations">
 
-  <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn btn-lg btn-block" %>
-  <%= link_to "edit", edit_offer_path, class: "orange-btn btn-lg btn-block" %>
-    <%= link_to "Précédent", offers_path(@offers, :placenumber => @placenumber, :price =>@price, :theme => @theme, :city => @city), class: "kaki-btn btn-lg btn-block" %>
-  </div>
-</div>
 
-<div class ="reviewcontainer">
-<div class ="forms">
-<%= render "reviews/reviewsform", offer: @offer, review: @review %>
-</div>
+
+
+  <div class="container col-9 text-center">
+    <div class="container d-flex align-items-center mt-3 mb-5">
+      <div class="profile-user-review">
+        <%= cl_image_tag(@offer.user.photo.key) %>
+      </div>
+      <div class="user d-flex flex-column">
+        <div>
+        <strong><%= @offer.user.first_name %></strong>
+        <strong><%= @offer.user.last_name  %></strong>
+        </div>
+      </div>
+      <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn btn-lg d-inline-block " %>
+    </div>  
+      <div class="description text-justify">
+        <p> <%= @offer.description.html_safe %> </p>
+      </div>
+  </div> 
+
+
+<div class="container col-6">
+  <div class="forms text-center">
+    <%= render "reviews/reviewsform", offer: @offer, review: @review %>
+  </div>
+</div>  
+
+    
 <%= render 'reviews' %>
-</div>
-</div>
+</div> 
