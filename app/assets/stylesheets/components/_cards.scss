@@ -87,6 +87,11 @@
       }
     }
 
+    .informations-container h2{
+       font-size: 26px;
+       line-height: 30px;
+       margin-bottom: 15px;
+    }
 
     .informations-container{
 
@@ -98,7 +103,7 @@
 
       transition: .3s;
 
-      .title {
+      .title-cards {
         position: relative;
         padding-bottom: 10px;
         margin-bottom: 10px;
