@@ -1,6 +1,6 @@
 
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
+meta_product_name: "Live Your Trip"
+meta_title: "Partez à l'aventure grâce Live your Trip !"
+meta_description: "À la recherche de surprise et d'inattendu avec tes potes ? Partez à l'aventure grâce Live your Trip !"
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
