@@ -50,30 +50,45 @@
 }
 
 .message-container {
+  display: grid;
   text-align: left;
+  margin: 8px 0;
   .background-messages {
     background-color: $beige;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 8px 5px 0 5px;;
   }
 }
-
-// //     box-sizing: border-box;
-// //     background-color: $beige;
-// //     border-radius: 4px;
-// //     width: 90%;
-// //     // display: inline-block;
-
-//   }
   
 .current-user-message {
+  display: grid;
+  justify-content: flex-end;
   text-align: right;
+  margin: 8px 0;
   .background-messages {
     background-color: $sand;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 8px 5px 0 5px;;
   }
 }
-//     box-sizing: border-box;
-//     background-color: $sand;
-//     border-radius: 4px;
-//     display: inline-block;
-//     // float: right;
-//     justify-content: right;
-  
+.input-message {
+  width: 500px;
+}
+
+#new_message {
+  display: flex;
+  justify-content: center;
+}
+
+.send-message input {
+  width: 66px;
+  background-color: $orange;
+  padding: 4px 17px;
+  border-radius: 5px;
+}
+
+.send-message input:hover {
+  background-color: $lightorange;
+}
