@@ -75,12 +75,15 @@
 }
 
 .sizeback {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
+  position:absolute;
+  // bottom: 10px;
+  left: 20px;
+  float: right;
+  z-index: 99;
+  top: 120px;
 
   img {
-    width: 40px;
+    width: 50px;
  
   }
 }
