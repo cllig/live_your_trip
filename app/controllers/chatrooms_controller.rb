@@ -19,7 +19,7 @@ class ChatroomsController < ApplicationController
     # @chatroom.user = current_user
     # @chatroom.name = @chatroom.user.first_name
     if @chatroom.save
-    redirect_to @chatroom
+    redirect_to chatrooms_path(@chatroom)
     else
       render :new
     end
