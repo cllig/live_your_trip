@@ -13,8 +13,8 @@
 .list-group-item {
   background-color: $orange;
   border-color: $orange;
+  color: white !important;
 }
-
 
 .list-group-item:hover,
 .list-group-item.active {
