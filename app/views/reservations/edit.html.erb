@@ -1,3 +1,4 @@
+<div class="container">
 <%= simple_form_for [@offer, @reservation] do |f| %>
  <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -10,10 +11,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Valider' %>
+    <%= f.button :submit, 'Valider', class: "orange-btn" %>
   </div>
 
 <% end %>
 
 
-<%= link_to "Annuler", reservation_path(@reservation) %>
+<%= link_to "Annuler", reservation_path(@reservation), class: "orange-btn" %>
+</div>

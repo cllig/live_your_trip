@@ -1,3 +1,4 @@
+<div class="container">
 <%= simple_form_for(@offer) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -12,6 +13,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit , class: "orange-btn" %>
   </div>
 <% end %>
+</div>
