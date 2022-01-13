@@ -24,7 +24,7 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .details h2 {
@@ -39,7 +39,7 @@
 
 .infos {
   border-right: 3px dotted $black;
-  height: 32vh;
+  height: 43vh;
 }
 
 .title {
@@ -66,4 +66,8 @@
 .infos p {
   text-align: center;
   margin-top: 20px;
+}
+
+.subtitle-reservation {
+  color: $white!important;
 }

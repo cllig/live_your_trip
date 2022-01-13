@@ -3,20 +3,24 @@
 
     <div class="details_card">
         <div class="details">
-          <h2>Next Stop <%= @reservation.offer.city %></h2><%= image_tag "logo-white.svg", :class=>"icon" %></i>
+        <div>
+          <h2>Next Stop <%= @reservation.offer.city %></h2>
+          <p class="subtitle-reservation"> <%= @reservation.offer.title %> </p>
+        </div>
+           <%= image_tag "logo-white.svg", :class=>"icon" %></i>
         </div>
 
             <div class="row">
               <div class="infos col-6">
                   <p>Guide : <strong> <%= @reservation.offer.user.first_name  %> <%= @reservation.offer.user.last_name %></strong></p>
                   <p>Nombre de participants :<strong> <%= @reservation.participant %></strong></p>
-                  <p>Prix par personne :<strong> <%= @reservation.offer.price %></strong></p>
+                  <p>Prix par personne :<strong> <%= @reservation.offer.price %>€</strong></p>
                 </div>
 
               <div class="price-info col-6">
                   <p>Date d'arrivée :<strong> <%= @reservation.arrival%></strong></p>
                   <p>De : <strong><%= @reservation.start_hour.strftime('%H:%M:%S') %> </strong>à <strong><%= @reservation.finish_hour.strftime('%H:%M:%S') %></strong></p>
-                  <p>Prix total : <strong><%= @reservation.offer.price * @reservation.participant %></strong></p>
+                  <p>Prix total : <strong><%= @reservation.offer.price * @reservation.participant %>€</strong></p>
                    <p> <i class="fas fa-barcode"></i></p>
               </div>
             </div>
@@ -26,3 +30,4 @@
           <%= link_to "Modifier", edit_reservation_path(@reservation), class:"orange-btn"%>
           <%= link_to "Contactez le guide !", new_chatroom_path, class:"orange-btn" %>
         </div>
+      </div>
