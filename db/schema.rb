@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_153548) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.float "price"
+    t.integer "price"
     t.string "theme"
     t.string "city"
     t.bigint "user_id", null: false
@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(version: 2022_01_12_153548) do
     t.string "last_name"
     t.string "first_name"
     t.string "city"
-    t.boolean "guide", default: false
+    t.boolean "guide"
     t.integer "rating_number"
     t.text "rating_content"
     t.text "description"
