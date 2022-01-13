@@ -13,4 +13,12 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :city, presence: true
+
+def profile_picture
+    if photo.attached?
+      photo.key
+    else
+      "traveller.png"
+    end
+  end
 end
