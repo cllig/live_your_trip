@@ -26,7 +26,8 @@
 
 .container-chatroom {
   display: flex;
-  height: 100%;
+  min-height: 400px;
+  margin-bottom: 43px;
 }
 
 .chatbox {
