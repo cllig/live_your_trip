@@ -19,7 +19,8 @@ file25 = URI.open("https://images.unsplash.com/photo-1519345182560-3f2917c472ef?
 file26 = URI.open("https://images.unsplash.com/photo-1516224498413-84ecf3a1e7fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 file27 = URI.open("https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
 file28 = URI.open("https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80")
-
+# file29 = File.open(File.join(Rails.root,'app/assets/images/florine_avatar.jpg'))
+# file29 = File.open("app/assets/images/florine_avatar.jpg")
 
 user1 = User.create(first_name: "Jean", last_name: "Dupont", email: "jean@gmail.com", password: "aaaaaa", guide: true, city: "Marseille" )
 user2 = User.create(first_name: "Axel", last_name: "Martin", email: "axel@gmail.com", password: "aaaaaa", guide: true, city: "Paris")
@@ -70,7 +71,8 @@ user37 = User.create(first_name: "Soan", last_name: "Salla", email: "soan@gmail.
 user38 = User.create(first_name: "Come", last_name: "Givre", email: "come@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 user39 = User.create(first_name: "Evan", last_name: "Flocon", email: "evan@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 user40 = User.create(first_name: "Maxime", last_name: "Durant", email: "maxime@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
-user41 = User.create(first_name: "Florine", last_name: "Ponsard", email: "florine@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
+user41 = User.create(first_name: "Florine", last_name: "Ponsard", email: "florine@gmail.com", password: "aaaaaa", guide: true, city: "Marseille")
+# user41.photo.attach(io: file29, filename: 'florine_avatar.jpg', content_type: 'image/jpg')
 User.create(first_name: "Camille", last_name: "Poirier", email: "camille@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 User.create(first_name: "Tom", last_name: "De saxe", email: "tom@gmail.com", password: "aaaaaa", guide: true, city: "Annecy")
 User.create(first_name: "Léon", last_name: "Girard", email: "leon@gmail.com", password: "aaaaaa", guide: true, city: "Lille")
