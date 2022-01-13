@@ -11,9 +11,7 @@
 <div class="black-bar"></div>
 
 <div class='align-card'>
-<% @offers.each do | offer | %>
-
-    <%= render 'offers/cards', offer: offer %>
-<% end %>
+  <% @offers.each do | offer | %>
+      <%= render 'offers/cards', offer: offer %>
+  <% end %>
 </div>
-

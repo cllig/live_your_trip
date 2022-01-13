@@ -1,11 +1,14 @@
 <% content_for :meta_title, "#{@offer.title} - #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @offer.description %>
 
+
+
 <div class="sizeback">
-    <%= link_to offers_path do %>
-      <%= image_tag "left.png" %>
+    <%= link_to offers_path(anchor: "container-booking-card-#{@offer.id}") do %>
+        <%= image_tag "left.png" %>
     <% end %>
 </div>
+
 
 <div class="container px-4">
   <div class ="offers">
@@ -51,19 +54,19 @@
         </div>
       </div>
       <%= link_to "Réserver", new_offer_reservation_path(@offer, :placenumber => @placenumber), class: "orange-btn btn-lg d-inline-block " %>
-    </div>  
+    </div>
       <div class="description text-justify">
         <p> <%= @offer.description.html_safe %> </p>
       </div>
-  </div> 
+  </div>
 
 
 <div class="container col-6">
   <div class="forms text-center">
     <%= render "reviews/reviewsform", offer: @offer, review: @review %>
   </div>
-</div>  
+</div>
 
-    
+
 <%= render 'reviews' %>
-</div> 
+</div>

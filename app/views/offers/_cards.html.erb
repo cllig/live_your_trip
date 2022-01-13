@@ -1,4 +1,5 @@
-<div class="container-booking-card">
+<div class= "container-booking-card" id="container-booking-card-<%= offer.id %>">
+
   <li class="booking-card" style="background-image:url(<%= cl_image_path offer.photos.first.key, crop: :fill, :style =>"background-image", :class => "card__image" %>);">
     <div class="book-container">
       <div class="content">
