@@ -11,8 +11,7 @@
 
           <%= f.input :arrival, as: :date, html5: true, label: 'Date de départ'%>
           <%= f.input :start_hour, label: 'Heure de départ'%>
-          <%= f.input :finish_hour, label: 'Heure de fin'%>
-          <%= f.input :participant, label: 'Nombre de participants', placeholder: @placenumber %>
+          <%= f.input :participant, label: 'Nombre de participants'%>
 
           <%= link_to "Annuler", offer_path(@offer), :class=>"btn kaki-btn" %>
 
