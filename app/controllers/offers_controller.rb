@@ -19,8 +19,8 @@ class OffersController < ApplicationController
     #     @theme = params[:theme]
     #   end
     # end
-    
- 
+
+
     if params[:city].present?
       @offers = @offers.where(city: params[:city])
       @city = params[:city]
