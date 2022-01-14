@@ -1,5 +1,5 @@
 class ChatroomsController < ApplicationController
-  
+
   def index
     @chatrooms = Chatroom.all
   end
@@ -24,7 +24,7 @@ class ChatroomsController < ApplicationController
       render :new
     end
   end
-  
+
   private
 
   def params_chatroom
