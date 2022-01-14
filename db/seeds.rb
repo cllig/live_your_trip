@@ -180,7 +180,7 @@ file19 = URI.open("https://cdn.pixabay.com/photo/2018/03/02/17/19/paris-3193674_
 # offer4.photos.attach(io: file11, filename: 'velodrome2.png', content_type: 'image/png')
 # offer4.photos.attach(io: file12, filename: 'velodrome3.png', content_type: 'image/png')
 
-offer1 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user1, title: "Découvrez les bars cachés !", placenumber: 10)
+offer1 = Offer.create(price: 15, theme: "Mystère", city: "Paris", user: user1, title: "Découvrez les bars cachés !", placenumber: 10, description: "a")
 offer1.photos.attach(io: file, filename: 'bar.png', content_type: 'image/png')
 # offer5.photos.attach(io: file11, filename: 'velodrome2.png', content_type: 'image/png')
 # offer5.photos.attach(io: file12, filename: 'velodrome3.png', content_type: 'image/png')
