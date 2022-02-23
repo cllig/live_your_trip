@@ -107,6 +107,23 @@ user41 = User.create(first_name: "Florine", last_name: "Ponsard", email: "florin
 
 
 offer1 = Offer.create(price: 15, theme: "Festif", city: "Paris", user: user1, title: "Découvrez les bars cachés !", placenumber: 10, description: "Hello ! Je m'apelle Jean et j'ai 27 ans ! <br> Je vis à la capitale depuis plusieurs années et j'ai donc eu le temps de repérer les meilleures addresses pour sortir boire des verres sur Paris !")
+# offer = Offer.create(price: 35, theme: "Culturel", theme_description: " Decouvrez le mucem autrement!", city: "Marseille", user: user1, title: "Mucem by night", placenumber: 8, description: "Hey ! J'ai 34 ans, je suis passioné par la culture en tout genre mais mon musée préféré reste le mucem ! Il mélange art et architecture ! Mes 2 passions réunis ! J'espère pourvoir vous la transmettre ! A très vite pour une visite")
+# offer.photos.attach(io: file, filename: 'mucem.png', content_type: 'image/png')
+# offer.photos.attach(io: file2, filename: 'mucem1.png', content_type: 'image/png')
+# offer.photos.attach(io: file3, filename: 'mucem2.png', content_type: 'image/png')
+# offer2 = Offer.create(price: 20, theme: "Culturel", theme_description: "Decouvrez le mucem", city: "Marseille", user: user2, title: "Mucem", placenumber: 10)
+# offer2.photos.attach(io: file4, filename: 'mucem3.png', content_type: 'image/png')
+# offer2.photos.attach(io: file5, filename: 'mucem4.png', content_type: 'image/png')
+# offer2.photos.attach(io: file6, filename: 'mucem4.png', content_type: 'image/png')
+# offer3 = Offer.create(price: 40, theme: "Culturel", theme_description: "Les lieux emblématiques de Marseille", city: "Marseille", user: user3, title: "Les emblèmes Marseillais", placenumber: 12)
+# offer3.photos.attach(io: file7, filename: 'ndlg.png', content_type: 'image/png')
+# offer3.photos.attach(io: file8, filename: 'ndlg1.png', content_type: 'image/png')
+# offer3.photos.attach(io: file9, filename: 'ndlg2.png', content_type: 'image/png')
+# offer4 = Offer.create(price: 20, theme: "Culturel", theme_description: "Vivez un match au Vel", city: "Marseille", user: user4, title: "C'est Marseille Bébé", placenumber: 10)
+# offer4.photos.attach(io: file10, filename: 'velodrome.png', content_type: 'image/png')
+# offer4.photos.attach(io: file11, filename: 'velodrome2.png', content_type: 'image/png')
+# offer4.photos.attach(io: file12, filename: 'velodrome3.png', content_type: 'image/png')
+
 offer1.photos.attach(io: file, filename: 'bar.png', content_type: 'image/png')
 offer1.photos.attach(io: file30, filename: 'bar2.png', content_type: 'image/png')
 offer1.photos.attach(io: file31, filename: 'bar3.png', content_type: 'image/png')
